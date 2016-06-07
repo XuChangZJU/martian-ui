@@ -1,0 +1,23 @@
+{
+  "name": "martian-ui",
+  "version": "1.0.0",
+  "description": "A UI components lib  for Martian Inc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XuChangZJU/martian-ui.git"
+  },
+  "keywords": [
+    "react-native",
+    "ui"
+  ],
+  "author": "lavystord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XuChangZJU/martian-ui/issues"
+  },
+  "homepage": "https://github.com/XuChangZJU/martian-ui#readme"
+}

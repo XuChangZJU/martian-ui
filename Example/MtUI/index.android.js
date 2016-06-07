@@ -1,6 +1,7 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
+ * @flow
  */
 
 import React, { Component } from 'react';
@@ -11,19 +12,23 @@ import {
   View
 } from 'react-native';
 
+import {Separator} from 'martian-ui';
+// const Separator = require('../../lib/Separator');
 class MtUI extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
+          To get started, edit index.aoid.js
         </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
+
+        <View style={styles.welcome}>
+        </View>
+        <Separator/>
+        <View style={styles.welcome2}>
+        </View>
+
       </View>
     );
   }
@@ -33,13 +38,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'stretch',
+    // backgroundColor: 'red',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red',
+  },
+  welcome2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'blue',
   },
   instructions: {
     textAlign: 'center',
