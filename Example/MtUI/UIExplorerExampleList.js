@@ -35,7 +35,7 @@ const createExamplePage = require('./createExamplePage');
 
 import type {
   UIExplorerExample,
-} from './UIExplorerList.ios';
+} from './UIExplorerList';
 
 const ds = new ListView.DataSource({
   rowHasChanged: (r1, r2) => r1 !== r2,

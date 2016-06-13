@@ -28,6 +28,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'ImageExample',
     module: require('./ImageExample'),
   },
+  {
+    key: 'SeparatorExample',
+    module: require('./lib/SeparatorExample'),
+  },
   
 ];
 
