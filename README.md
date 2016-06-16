@@ -24,8 +24,10 @@ Before running the app, make sure you ran:
 - [View props](http://facebook.github.io/react-native/docs/textinput.html)
 - 禁用props：
 	- clearButtonMode
+	- multiline
 - 常用props：
 	- placeholder 
 	- value
 	- onChangeText
 	- secureTextEntry
+	- keyboardType
