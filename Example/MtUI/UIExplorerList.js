@@ -32,6 +32,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'SeparatorExample',
     module: require('./lib/SeparatorExample'),
   },
+  {
+  	key: 'TextExample',
+    module: require('./lib/TextExample'),
+  }
   
 ];
 

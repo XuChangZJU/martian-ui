@@ -4,8 +4,8 @@
 // Export React, plus some native additions.
 var MartianUI = {
     // Components
-    MtSeparator:require('./lib/Separator')
-
+    MtSeparator:require('./lib/Separator'),
+    MtText:require('./lib/Text')
 
 
 };
