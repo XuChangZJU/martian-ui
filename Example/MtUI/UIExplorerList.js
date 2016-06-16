@@ -36,6 +36,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'InputExample',
     module: require('./lib/InputExample')
   },
+  {
+    key: 'ButtonExample',
+    module: require('./lib/ButtonExample')
+  },
   
 ];
 

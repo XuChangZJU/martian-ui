@@ -22,7 +22,7 @@ exports.examples = [
         title: 'Basic MtInput',
         render: function () {
             return (
-               <MtInput autoFocus = {false}>
+               <MtInput >
                </MtInput>
             );
         }
