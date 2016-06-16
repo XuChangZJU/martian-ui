@@ -7,6 +7,7 @@ var MartianUI = {
     MtSeparator:require('./lib/Separator'),
     MtInput:require('./lib/Input'),
     MtButton:require('./lib/Button'),
+    MtLoadingModal:require('./lib/LoadingModal'),
 
 
 
