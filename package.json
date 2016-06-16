@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/XuChangZJU/martian-ui/issues"
   },
-  "homepage": "https://github.com/XuChangZJU/martian-ui#readme"
+  "homepage": "https://github.com/XuChangZJU/martian-ui#readme",
+  "dependencies": {
+    "react-native-button": "^1.6.0"
+  }
 }
