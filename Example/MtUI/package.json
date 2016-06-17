@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^15.1.0",
     "react-native": "^0.27.1",
-    "martian-ui": "file:../../"
+    "martian-ui": "file:../../",
+    "react-native-button": "^1.4.2"
   }
 }

@@ -24,11 +24,9 @@ exports.examples = [
         description: 'Divide gray block with a white line',
         render: function () {
             return (
-
-                         <MtText>
-                             {string}
-                         </MtText>
-
+                <MtText>
+                    {string}
+                </MtText>
             );
         },
     }

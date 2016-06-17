@@ -35,6 +35,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
   	key: 'TextExample',
     module: require('./lib/TextExample'),
+  },
+  {
+    key: 'CaptchaExample',
+    module: require('./lib/CaptchaExample'),
   }
   
 ];
