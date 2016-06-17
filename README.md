@@ -42,3 +42,17 @@ Before running the app, make sure you ran:
 - 可选props：
 	- `style：object` button中文字的文字样式
 	- `containerStyle：object` button背景样式
+
+### MtLoadingModal
+loadingModal
+
+### MtListView
+基本的列表视图
+#### props
+- [View Props](http://facebook.github.io/react-native/docs/listview.html)
+- 常用props
+	- `data：Array` 数据源 
+	- `onReresh：function`   下拉刷新
+	- `refreshing：bool` 下拉时是否显示ActivityIndicator
+- 可选props
+	- `dataSource:ListViewDataSource` Native数据源，通常情况下可用props data代替

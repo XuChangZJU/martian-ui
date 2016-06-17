@@ -44,6 +44,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'LoadingModalExample',
     module: require('./lib/LoadingModalExample')
   },
+  {
+    key: 'ListViewExample',
+    module: require('./lib/ListViewExample')
+  },
   
 ];
 

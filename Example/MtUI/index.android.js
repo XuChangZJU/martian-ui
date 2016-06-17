@@ -18,6 +18,7 @@ const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
 const URIActionMap = require('./URIActionMap');
 const View = require('View');
 
+
 const DRAWER_WIDTH_LEFT = 56;
 
 type Props = {
@@ -183,7 +184,11 @@ class UIExplorerApp extends React.Component {
     }
     return this._handleAction({ type: 'BackAction' });
   }
+
+
+
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -200,7 +205,7 @@ const styles = StyleSheet.create({
   },
 });
 
+
 AppRegistry.registerComponent('MtUI', () => UIExplorerApp);
 
 module.exports = UIExplorerApp;
-// AppRegistry.registerComponent('MtUI', () => MtUI);
