@@ -26,3 +26,14 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 #### props 
 通常情况直接使用就好，不用重定义style
 - [View Props](http://facebook.github.io/react-native/docs/text.html)
+
+### MtCaptcha
+ 发送验证码按钮
+
+#### props
+- 常用props：
+ 	- `text:string`  倒计时前显示文字
+ 	- `disabled：bool`
+ 	- `onPress：function`
+- 可选props：
+	- `time：number` 倒计时时长
