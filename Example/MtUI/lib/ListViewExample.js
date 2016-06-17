@@ -21,7 +21,6 @@ var MtListView = require('martian-ui').MtListView;
 
 var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-// var  dataWareHouse = genRows({});
 
 /*exports.title  = 'MtListView';
 exports.description = 'A Wrapped  Component with scrollable list of data.';
@@ -33,17 +32,6 @@ exports.examples = [
         }
 
     },
-    {
-        title: 'Todo',
-        render: function () {
-            return (
-                <Text>
-                    对props有疑义的请联系XiaoMing
-                </Text>
-            );
-        }
-    }
-
 
 ];*/
 
