@@ -1,16 +1,18 @@
 # Martian-UI
 The lib includes a sample app that showcases Martian wrapped views and modules.
 
-## Running this app
+## UI Example 
 
 Before running the app, make sure you ran:
 
     git clone https://github.com/XuChangZJU/martian-ui.git
-    cd martian-ui
+    cd ./martian-ui/Example/MtUI
     npm install
 
 ## Usage
-
+```js
+import {MtSeparator} from 'martian-ui'
+```
 ### MtSeparator
 用于两条Item之间的分离
 #### props：
