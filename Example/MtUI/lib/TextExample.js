@@ -17,11 +17,11 @@ var MtText = require('martian-ui').MtText;
 var string = 'hello';
 
 exports.title  = 'MtText';
-exports.description = 'Base component for Text.';
+exports.description = 'Text is used to show some words.';
 exports.examples = [
     {
         title: 'Plain Text',
-        description: 'Divide gray block with a white line',
+        description: 'Nothing to describe',
         render: function () {
             return (
                 <MtText>
