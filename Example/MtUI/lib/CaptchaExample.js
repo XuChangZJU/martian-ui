@@ -4,24 +4,15 @@
 'use strict';
 
 var React = require('react');
-var ReactNative = require('react-native');
-var {
-    Alert,
-    StyleSheet,
-    TouchableHighlight,
-    Text,
-    View,
-} = ReactNative;
 
 var Captcha = require('martian-ui').MtCaptcha;
-import Button from 'react-native-button';
 
 exports.title  = 'MtCaptcha';
-exports.description = 'Base captcha.';
+exports.description = 'Captcha is used to send message.';
 exports.examples = [
     {
         title: 'Plain captcha',
-        description: 'Divide gray block with a white line',
+        description: '没啥可描述的',
         render: function () {
             return (
                 <Captcha
@@ -31,15 +22,6 @@ exports.examples = [
                     onPress={()=> { }}
                 />
             );
-            // return(
-            //     <Button
-            //         contentContainerStyle={{backgroundColor:'blue',height:50,margin:20,justifyContent:'center'}}
-            //     >
-            //         hello
-            //     </Button>
-            //     );
-
-            
         },
     }
 
