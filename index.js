@@ -6,7 +6,9 @@ var MartianUI = {
     // Components
     MtSeparator:require('./lib/Separator'),
     MtText:require('./lib/Text'),
-    MtCaptcha:require('./lib/Captcha')
+    MtCaptcha:require('./lib/Captcha'),
+    MtContainer:require('./lib/Container'),
+    MtNavBar:require('./lib/NavBar')
 
 };
 
