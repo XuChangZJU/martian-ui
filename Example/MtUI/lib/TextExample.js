@@ -13,7 +13,8 @@ var {
     View,
 } = ReactNative;
 
-var MtText = require('martian-ui').MtText;
+var MtChar = require('martian-ui').MtChar;
+var {MtText,MtHeading,MtLabel} = MtChar;
 var string = 'hello';
 
 exports.title  = 'MtText';
@@ -21,14 +22,34 @@ exports.description = 'Text is used to show some words.';
 exports.examples = [
     {
         title: 'Plain Text',
-        description: 'Nothing to describe',
         render: function () {
             return (
-                <MtText>
+                <MtText style = { {textAlign:'center'}}>
                     {string}
                 </MtText>
             );
         },
-    }
+    },
+    {
+        title: 'Plain Heading',
+        render: function () {
+            return (
+                <MtHeading >
+                    I'm Heading!!
+                </MtHeading>
+            );
+        },
+    },
+    {
+        title: 'Plain Label',
+        render: function () {
+            return (
+                <MtLabel>
+                    I'm Label
+                </MtLabel>
+            );
+        },
+    },
+
 
 ];
