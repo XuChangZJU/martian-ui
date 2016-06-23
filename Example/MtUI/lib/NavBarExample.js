@@ -20,12 +20,21 @@ exports.description = 'NavBar is navigation bar.';
 exports.examples = [
     {
         title: 'Plain NavBar',
-        description: 'Nothing to describe',
         render(): ReactElement {
             return (
                 <MtNavBar pop = {()=> alert("hello")}
-
                 />
+
+            );
+        },
+    },
+    {
+        title: 'NavBar with title',
+        render(): ReactElement {
+            return (
+              <MtNavBar pop = {()=> alert("hello")}
+                        title = 'Title'
+              />
 
             );
         },

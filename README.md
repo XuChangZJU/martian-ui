@@ -38,16 +38,18 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - 可选props：
 	- `time：number` 倒计时时长
 	
-###MtNavBar
+### MtNavBar
 用于导航栏，左上角为返回按钮
 #### props
 - 常用props：
  	- `pop:function`  返回按钮的跳转函数
+ 	- `title:string` 导航栏标题
 - 可选props：
+	- `rightIcon:element` 右侧元素
 
 
-###MtContainer
-用于容器
+### MtContainer
+基本容器组件
 #### props
 - 常用props：
 - 可选props：

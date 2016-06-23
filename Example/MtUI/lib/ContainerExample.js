@@ -21,14 +21,13 @@ exports.description = 'Container is a view.';
 exports.examples = [
     {
         title: 'Plain Container',
-        description: 'Nothing to describe',
+        description: 'A 50 pt height red View insides Container',
         render: function () {
             return (
-                <View height={40} backgroundColor="red">
                     <MtContainer>
-
+                        <View style={{margin:10,backgroundColor: 'red',height:50}}>
+                        </View>
                     </MtContainer>
-                </View>
             );
         },
     }
