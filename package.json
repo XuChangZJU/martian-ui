@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/XuChangZJU/martian-ui#readme",
   "dependencies": {
-    "react-native-button": "^1.6.0"
+    "react-native-button": "^1.6.0",
+    "react-native-vector-icons": "^2.0.3"
   }
 }

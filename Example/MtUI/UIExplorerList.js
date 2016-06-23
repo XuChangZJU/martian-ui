@@ -48,6 +48,22 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'ListViewExample',
     module: require('./lib/ListViewExample')
   },
+  {
+  	key: 'TextExample',
+    module: require('./lib/TextExample'),
+  },
+  {
+    key: 'CaptchaExample',
+    module: require('./lib/CaptchaExample'),
+  },
+  {
+    key: 'NavBarExample',
+    module: require('./lib/NavBarExample')
+  },
+  {
+    key: 'ContainerExample',
+    module: require('./lib/ContainerExample')
+  },
   
 ];
 

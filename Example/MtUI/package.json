@@ -6,8 +6,9 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "martian-ui": "file:../../",
     "react": "^15.1.0",
     "react-native": "^0.27.1",
-    "martian-ui": "file:../../"
+    "react-native-vector-icons": "^2.0.3"
   }
 }

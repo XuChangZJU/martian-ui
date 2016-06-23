@@ -9,9 +9,10 @@ var MartianUI = {
     MtButton:require('./lib/Button'),
     MtLoadingModal:require('./lib/LoadingModal'),
     MtListView:require('./lib/ListView'),
-
-
-
+    MtChar:require('./lib/Text'),
+    MtCaptcha:require('./lib/Captcha'),
+    MtContainer:require('./lib/Container'),
+    MtNavBar:require('./lib/NavBar')
 };
 
 
