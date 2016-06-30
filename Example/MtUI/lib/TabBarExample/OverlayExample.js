@@ -10,7 +10,6 @@ export default React.createClass({
   render() {
     return <MtTabBar
       style={styles.container}
-      renderTabBar={()=><DefaultTabBar backgroundColor='rgba(255, 255, 255, 0.7)' />}
       tabBarPosition='overlayTop'
     >
       <ScrollView tabLabel='iOS'>
