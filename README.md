@@ -104,4 +104,20 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - 常用props：
 - 可选props：
 
+### MtTabBar
+可带滑动属性的TabBar
+#### props
+- 常用props：
+	- `tabBarPosition：string` 标签栏位置
+	- `children：ReactComponent`每个component必须有一个`tabLabel`属性用来区别标签项
+- 可选props：
+	- `renderTabBar：ReactComponent` 自定义渲染效果，用默认值可以不写
+	- `intialPage：number` 被选中的初始标签页，从0开始计数
+	- `tabBarUnderlineColor：string`默认标签栏下划线颜色
+	- `tabBarBackgroundColor：string`标签栏背景色
+	- `tabBarActiveTextColor：string`标签项被选中文字颜色
+	- `tabBarInActiveTextColor：string`标签项未被选中文字颜色
+	- `tabBarTextStyle：Object`标签项样式
+- [More detail props](https://github.com/skv-headless/react-native-scrollable-tab-view)
+
 

@@ -12,7 +12,8 @@ var MartianUI = {
     MtChar:require('./lib/Text'),
     MtCaptcha:require('./lib/Captcha'),
     MtContainer:require('./lib/Container'),
-    MtNavBar:require('./lib/NavBar')
+    MtNavBar:require('./lib/NavBar'),
+    MtTabBar:require('./lib/TabBar'),
 };
 
 

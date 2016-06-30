@@ -52,9 +52,7 @@ var Sample = React.createClass( {
     },
 
     getInitialState: function() {
-        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         return {
-            dataSource: ds.cloneWithRows(this._genRows({})),
             loading:false,
             dataWareHouse: this._genRows({})
         };
@@ -84,7 +82,7 @@ var Sample = React.createClass( {
     },
 
     _onRefresh() {
-         alert('hello');
+         alert('Do something !!');
         this.setState({loading: true});
         setTimeout(()=> {   this.setState({loading:false}) },3000)
     },
@@ -105,7 +103,7 @@ var Sample = React.createClass( {
 },
     
     
-    _genRows(pressData: {[key: number]: boolean}): Array<string> {
+    _genRows(pressData ): Array<string> {
     var dataBlob = [];
     for (var ii = 0; ii < 100; ii++) {
         var pressedText = pressData[ii] ? ' (pressed)' : '';

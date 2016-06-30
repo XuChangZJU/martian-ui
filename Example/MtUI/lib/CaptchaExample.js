@@ -12,7 +12,7 @@ exports.description = 'Captcha is used to send message.';
 exports.examples = [
     {
         title: 'Plain captcha',
-        description: '没啥可描述的',
+        description: 'Captcha component that can customize time and display context',
         render: function () {
             return (
                 <Captcha

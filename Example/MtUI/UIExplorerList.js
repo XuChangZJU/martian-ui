@@ -64,6 +64,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'ContainerExample',
     module: require('./lib/ContainerExample')
   },
+  {
+    key: 'TabBarExample',
+    module: require('./lib/TabBarExample/TabBarExample')
+  },
   
 ];
 
