@@ -89,13 +89,18 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 	- `time：number` 倒计时时长
 	
 ### MtNavBar
-用于导航栏，左上角为返回按钮
+用于导航栏，通常左上角为返回按钮
 #### props
 - 常用props：
- 	- `pop:function`  返回按钮的跳转函数
+ 	- `leftItem:Object`  左Item
+	 	- `title`:
+	 	- `icon`:当有title且无layout时disable
+	 	- `onPress`:
+	 	- `layout`:设为icon,则tilte为disable
  	- `title:string` 导航栏标题
+ 	- `rightItem:Object` 属性同leftItem
 - 可选props：
-	- `rightIcon:element` 右侧元素
+	- `foreground:string`  “dark”暗色系
 
 
 ### MtContainer
