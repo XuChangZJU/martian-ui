@@ -68,6 +68,15 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'TabBarExample',
     module: require('./lib/TabBarExample/TabBarExample')
   },
+  {
+    key: 'EmptyViewExample',
+    module: require('./lib/EmptyViewExample')
+  },
+  {
+    key: 'ListViewPageExample',
+    module: require('./lib/ListViewPagingExample')
+  },
+
   
 ];
 
