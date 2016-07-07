@@ -128,4 +128,12 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 ### MtEmptyView
 listview中在第一次网络请求前的空白页
 
+### MtCircleView
+圆形view
+#### props
+- 常用props：
+	- `size: number` 直径大小
+	- `color:string` 背景颜色
+- 可选props：
+	- [ RN View Props](http://facebook.github.io/react-native/docs/view.html)	
 

@@ -71,6 +71,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'EmptyViewExample',
     module: require('./lib/EmptyViewExample')
+  }, 
+  {
+    key: 'CircleViewExample',
+    module: require('./lib/CircleViewExample')
   },
   {
     key: 'ListViewPageExample',
