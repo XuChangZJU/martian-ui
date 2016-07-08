@@ -174,7 +174,7 @@ var ListViewPagingExample = React.createClass({
   render: function() {
     return (
       <ListView
-        style={styles.listview}
+        style={styles.listView}
         dataSource={this.state.dataSource}
         onChangeVisibleRows={(visibleRows, changedRows) => console.log({visibleRows, changedRows})}
         renderHeader={this.renderHeader}
@@ -197,7 +197,7 @@ var ListViewPagingExample = React.createClass({
 });
 
 var styles = StyleSheet.create({
-  listview: {
+  listView: {
     backgroundColor: '#B0C4DE',
   },
   header: {
