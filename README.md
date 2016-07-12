@@ -137,3 +137,12 @@ listview中在第一次网络请求前的空白页
 - 可选props：
 	- [ RN View Props](http://facebook.github.io/react-native/docs/view.html)	
 
+### MtStateFlow
+状态指示条,可用于显示一个业务的进度
+
+#### props
+- 必写props
+	- `states：array`：状态数组
+	- `current：number` 当前状态
+- 可选props
+	- `containerStyle:Object` 容器样式

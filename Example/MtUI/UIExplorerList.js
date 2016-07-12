@@ -77,6 +77,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/CircleViewExample')
   },
   {
+    key: 'StateFlowExample',
+    module: require('./lib/StateFlowExample')
+  },
+  {
     key: 'ListViewPageExample',
     module: require('./lib/ListViewPagingExample')
   },

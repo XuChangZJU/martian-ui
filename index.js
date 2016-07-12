@@ -16,6 +16,7 @@ var MartianUI = {
     MtTabBar: require('./lib/TabBar'),
     MtEmptyView: require('./lib/EmptyView'),
     MtCircleView: require('./lib/CircleView'),
+    MtStateFlow: require('./lib/StateFlow'),
 };
 
 
