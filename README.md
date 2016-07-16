@@ -146,3 +146,15 @@ listview中在第一次网络请求前的空白页
 	- `current：number` 当前状态
 - 可选props
 	- `containerStyle:Object` 容器样式
+
+### MtRadioButton
+多选一按钮
+#### props
+- 必写options
+	- `options: array`：选项数组
+	- `onSelect:function(selectedOption,selectedIndex)` 选中时的回调
+- 可选options
+	- `renderOption:function(option,selected,onSelect,index)` 应返回一个选项node，默认node为选项值，被选中时有对勾
+	- `renderContainer:function(optionNodes)`
+	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
+	- `selectedindex` 初始选中下标

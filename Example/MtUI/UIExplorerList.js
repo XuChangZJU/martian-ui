@@ -81,8 +81,16 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/StateFlowExample')
   },
   {
+    key: 'RadioButtonExample',
+    module: require('./lib/RadioButtonExample')
+  },
+  {
     key: 'ListViewPageExample',
     module: require('./lib/ListViewPagingExample')
+  },
+  {
+    key: 'PickerExample',
+    module: require('./lib/PickerExample')
   },
 
   
