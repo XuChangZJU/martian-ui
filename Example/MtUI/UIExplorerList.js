@@ -92,6 +92,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'PickerExample',
     module: require('./lib/PickerExample')
   },
+  {
+    key: 'GridExample',
+    module: require('./lib/GridExample')
+  },
 
   
 ];

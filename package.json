@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A UI components lib  for Martian Inc",
   "main": "index.js",
+  "files": [
+    "lib/*",
+    "index.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
