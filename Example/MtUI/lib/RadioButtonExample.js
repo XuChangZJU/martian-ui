@@ -61,6 +61,21 @@ const RadioButtonExample = React.createClass({
             </Text>
           </View>
         </UIExplorerBlock>
+        <UIExplorerBlock title="RadioButton with custom mapOption">
+          <View style={{ paddingTop: 20}}>
+            <RadioButton
+              options = {[{id:1,name:'option1'}, {id:2, name:'option2'},{id:4, name:'option3'}]}
+              selectedOption={ this.state.selected2 }
+              setOptionRenderValue={(option) => (option.name)}
+              testOptionEqual={(a,b)=>{return  a.id === b.id}}
+              onSelect = {this.setSelectedValue.bind(this, 'selected2')}
+            >
+            </RadioButton>
+            <Text style={{marginTop:20}}>
+              {`your choice is: ${this.state.selected2 && this.state.selected2.name}`}
+            </Text>
+          </View>
+        </UIExplorerBlock>
       </UIExplorerPage>
     );
   },
@@ -73,3 +88,4 @@ const RadioButtonExample = React.createClass({
 });
 
 module.exports = RadioButtonExample;
+

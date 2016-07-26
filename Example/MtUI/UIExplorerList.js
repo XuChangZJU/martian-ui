@@ -85,6 +85,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/RadioButtonExample')
   },
   {
+    key: 'GridExample',
+    module: require('./lib/GridExample')
+  },
+  {
     key: 'ListViewPageExample',
     module: require('./lib/ListViewPagingExample')
   },
@@ -93,9 +97,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/PickerExample')
   },
   {
-    key: 'GridExample',
-    module: require('./lib/GridExample')
+    key: 'LayoutAnimationExample',
+    module: require('./lib/LayoutAnimationExample')
   },
+
 
   
 ];
