@@ -66,7 +66,7 @@ const RadioButtonExample = React.createClass({
             <RadioButton
               options = {[{id:1,name:'option1'}, {id:2, name:'option2'},{id:4, name:'option3'}]}
               selectedOption={ this.state.selected2 }
-              setOptionRenderValue={(option) => (option.name)}
+              transformOption={(option) => (option.name)}
               testOptionEqual={(a,b)=>{return  a.id === b.id}}
               onSelect = {this.setSelectedValue.bind(this, 'selected2')}
             >
