@@ -29,19 +29,19 @@ const EditableItemPanelExample = React.createClass({
   render() {
     return (
       <UIExplorerPage title="MtEditableItemPanel">
-        <UIExplorerBlock title="Plain EditableItemPanel">
+        <UIExplorerBlock title="Plain EditableItemPanel with non-editable">
           <View style={{ paddingTop: 20}}>
             <EditableItemPanel
               items = {this.state.selected1}
               renderItem={renderItem}
-              onSelect = {this.setSelectedValue.bind(this, 'selected1')}
+              onClick = {(item)=>{alert(item.name)}}
               itemSize={75}
               onAdd={() => {alert('hello')}}
             >
             </EditableItemPanel>
           </View>
         </UIExplorerBlock>
-        <UIExplorerBlock title="EditableItemPanel with editable item">
+        <UIExplorerBlock title="EditableItemPanel with custom editable item">
           <View style={{ paddingTop: 20}}>
             <TouchableOpacity onPress={() => {this.setState({editable1: !this.state.editable1,selected2:null}); }}>
               <View style={styles.button}>
@@ -51,7 +51,7 @@ const EditableItemPanelExample = React.createClass({
             <EditableItemPanel
               items = {this.state.selected1}
               renderItem={renderItem}
-              onSelect = {this.setSelectedValue.bind(this, 'selected2')}
+              onClickInEditing = {this.setSelectedValue.bind(this, 'selected2')}
               itemSize={75}
               editable={this.state.editable1}
               onAdd={() => {alert('hello')}}
@@ -60,14 +60,18 @@ const EditableItemPanelExample = React.createClass({
             <Text style={{marginTop:20}}>
               {`your last choice is: ${this.state.selected2 && this.state.selected2.name}`}
             </Text>
+            <Text>
+              {`your last choice status is: ${this.state.selected2 && this.state.selected2.selected}`}
+            </Text>
           </View>
         </UIExplorerBlock>
       </UIExplorerPage>
     );
   },
 
-  setSelectedValue(key,value) {
+  setSelectedValue(key,value,index,selected) {
     const newState = {};
+    value.selected=selected;
     newState[key] = value;
     this.setState(newState);
   }
@@ -75,21 +79,21 @@ const EditableItemPanelExample = React.createClass({
 
 function renderItem(item,index,editable) {
   return (
-  <TouchableOpacity onPress={() => {alert('click')}} disabled={editable} >
+  // <TouchableOpacity onPress={() => {alert('click')}} disabled={editable} >
     <View style={styles.item}>
       <Text style={styles.text}>
         {item.name}
       </Text>
     </View>
-    </TouchableOpacity>
+    // </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   item: {
     backgroundColor: 'red',
-    height: 60,
-    width: 60,
+    height: 75,
+    width: 75,
   },
   text: {
     color: 'white',
