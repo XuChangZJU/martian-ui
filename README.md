@@ -169,8 +169,8 @@ listview中在第一次网络请求前的空白页
 	- `renderItem:function(item,index,editable,itemSize)`  **最好**和renderItem的大小一致（因为item默认居中布局，否则容易有空白)
 - 可选props
 	- `editable:bool`是否可编辑，默认为false
-	- `onSelect:function(item,index)`每项在可编辑状态下的回调函数
-	- `onItemPress(item,index)` 每项在不可编辑状态下的回调函数
+	- `onClickInEditing:function(item,index,selected)`在可编辑状态下点击每项的回调函数
+	- `onClick(item,index)` 在不可编辑状态下点击每项的回调函数,默认为全屏显示该项
 	- `containerStyle:Object`面板样式，通常情况可不写，一般写时只需决定是否有边框
 	- `disableAdd:bool`:是否有尾部加号框，默认为false
 	- `onAdd:function` 点击尾部加号框时的回调
