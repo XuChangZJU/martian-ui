@@ -18,6 +18,7 @@ var MartianUI = {
     MtCircleView: require('./lib/CircleView'),
     MtStateFlow: require('./lib/StateFlow'),
     MtRadioButton: require('./lib/RadioButton'),
+    MtEditableItemPanel: require('./lib/EditableItemPanel'),
     MtGrid: require('./lib/Grid')
 };
 

@@ -23,18 +23,23 @@ const {
   Text,
   View,
   TouchableOpacity,
+  Platform,
+  UIManager
 } = ReactNative;
 
 const AddRemoveExample = React.createClass({
 
   getInitialState() {
+    if (Platform.OS === 'android') {
+      UIManager.setLayoutAnimationEnabledExperimental(true)
+    }
     return {
       views: [],
     };
   },
 
   componentWillUpdate() {
-    LayoutAnimation.easeInEaseOut();
+    LayoutAnimation.spring();
   },
 
   _onPressAddView() {

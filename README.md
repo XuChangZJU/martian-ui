@@ -160,3 +160,17 @@ listview中在第一次网络请求前的空白页
 	- `renderContainer:function(optionNodes)`
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
 	- `selectedindex` 初始选中下标
+
+### MtEditablePanel
+可选择多项面板
+#### props
+- 必写props
+	- `items:array` 多项数组
+	- `renderItem:function(item,index,editable,itemSize)` 每项的渲染函数，当渲染组件有touchable* 效果时，需在editable状态下手动禁用touchable* 效果，否则onSelect回调失效; **最好**和renderItem的大小一致（因为item默认居中布局，否则容易有空白)
+- 可选props
+	- `editable:bool`是否可编辑，默认为false
+	- `onSelect:function(item,index)`每项在可编辑状态下的回调函数
+	- `containerStyle:Object`面板样式，通常情况可不写，一般写时只需决定是否有边框
+	- `disableAdd:bool`:是否有尾部加号框，默认为false
+	- `onAdd:function` 点击尾部加号框时的回调
+	- `itemSize:number`每项的大小（暂只为方形）

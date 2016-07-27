@@ -83,6 +83,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'RadioButtonExample',
     module: require('./lib/RadioButtonExample')
+  }, 
+  {
+    key: 'EditableItemPanelExample',
+    module: require('./lib/EditableItemPanelExample')
   },
   {
     key: 'GridExample',
