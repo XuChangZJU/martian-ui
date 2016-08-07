@@ -175,3 +175,12 @@ listview中在第一次网络请求前的空白页
 	- `disableAdd:bool`:是否有尾部加号框，默认为false
 	- `onAdd:function` 点击尾部加号框时的回调
 	- `itemSize:number`每项的大小（暂只为方形）
+
+### MtBadge
+消息数量展示
+#### props
+- 必写props
+	- `number:number`数量
+- 可选props
+	- `style`文字样式
+	- `containerStyle`文字外围容器样式

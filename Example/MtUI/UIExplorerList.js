@@ -89,6 +89,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/EditableItemPanelExample')
   },
   {
+    key: 'BadgeExample',
+    module: require('./lib/BadgeExample')
+  },
+  {
     key: 'GridExample',
     module: require('./lib/GridExample')
   },

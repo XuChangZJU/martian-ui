@@ -19,6 +19,7 @@ var MartianUI = {
     MtStateFlow: require('./lib/StateFlow'),
     MtRadioButton: require('./lib/RadioButton'),
     MtEditableItemPanel: require('./lib/EditableItemPanel'),
+    MtBadge: require('./lib/Badge'),
     MtGrid: require('./lib/Grid')
 };
 
