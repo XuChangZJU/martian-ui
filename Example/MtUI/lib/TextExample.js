@@ -14,10 +14,10 @@ var {
 } = ReactNative;
 
 var MtChar = require('martian-ui').MtChar;
-var {MtText,MtHeading,MtLabel} = MtChar;
+var {MtText,MtHeading,MtLabel,MtT2,MtT3,MtL2,MtL3} = MtChar;
 var string = 'hello';
 
-exports.title  = 'MtText';
+exports.title  = 'MtChar';
 exports.description = 'Text is used to show some words.';
 exports.examples = [
     {
@@ -47,6 +47,46 @@ exports.examples = [
                 <MtLabel>
                     I'm Label
                 </MtLabel>
+            );
+        },
+    },
+    {
+        title: 'Plain T2',
+        render: function () {
+            return (
+                <MtT2>
+                    I'm T2 字体
+                </MtT2>
+            );
+        },
+    },
+  {
+        title: 'Plain T3',
+        render: function () {
+            return (
+                <MtT3>
+                    I'm T3 字体
+                </MtT3>
+            );
+        },
+    },
+  {
+        title: 'Plain L2',
+        render: function () {
+            return (
+                <MtL2>
+                    I'm L2
+                </MtL2>
+            );
+        },
+    },
+  {
+        title: 'Plain L3',
+        render: function () {
+            return (
+                <MtL3>
+                    I'm L3
+                </MtL3>
             );
         },
     },
