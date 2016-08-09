@@ -91,6 +91,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'BadgeExample',
     module: require('./lib/BadgeExample')
+  }, 
+  {
+    key: 'SwiperExample',
+    module: require('./lib/SwiperExample')
   },
   {
     key: 'GridExample',

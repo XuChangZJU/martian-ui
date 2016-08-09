@@ -2,7 +2,7 @@
 'use strict';
 
 // Export React, plus some native additions.
-var MartianUI = {
+const MartianUI = {
     // Components
     MtSeparator: require('./lib/Separator'),
     MtInput: require('./lib/Input'),
@@ -20,6 +20,7 @@ var MartianUI = {
     MtRadioButton: require('./lib/RadioButton'),
     MtEditableItemPanel: require('./lib/EditableItemPanel'),
     MtBadge: require('./lib/Badge'),
+    MtSwiper: require('./lib/Swiper'),
     MtGrid: require('./lib/Grid')
 };
 

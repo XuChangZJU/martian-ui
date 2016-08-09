@@ -184,3 +184,16 @@ listview中在第一次网络请求前的空白页
 - 可选props
 	- `style`文字样式
 	- `containerStyle`文字外围容器样式
+
+### MtSwiper
+轮播组件，可用于显示图片、广告等
+#### props
+- 可选props
+	- `height:number`整个组件高度，默认flex：1
+	- `width:number`整个组件宽度，默认flex：1
+	- `style:object`整个组件样式
+	- `dotStyle:object`小点的样式
+	- `activeDotStyle:object`小点激活时的样式
+	- `renderPagination:function`:页码完全自定义渲染函数（Android对absolute为负值支持有问题）
+	- `autoplay:bool`是否自动播放
+-  [More detail props](https://github.com/leecade/react-native-swiper)
