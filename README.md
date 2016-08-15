@@ -68,9 +68,17 @@ import {MtChar} from 'martian-ui';
 let {MtText,MtHeading,MtLabel} = MtChar;
 ```
 #### 组件
-- MtText：普通文字
+- MtText：普通文字 14号 颜色#b4b4b4
 - MtHeading 标题
-- MtLabel： 标签
+- MtLabel： 标签 14号 颜色#262626
+- MtM2：14号 颜色#ff630e
+- MtW2：14号 颜色white
+- MtT2：14号 颜色#262626
+- MtT3：12号 颜色#262626
+- MtL2：14号 颜色#8f8f8f
+- MtL3：12号 颜色#8f8f8f
+- MtL4：10号 颜色#8f8f8f
+- MtR4：10号 颜色#ff0000
 
 
 #### props 
@@ -197,3 +205,27 @@ listview中在第一次网络请求前的空白页
 	- `renderPagination:function`:页码完全自定义渲染函数（Android对absolute为负值支持有问题）
 	- `autoplay:bool`是否自动播放
 -  [More detail props](https://github.com/leecade/react-native-swiper)
+
+### MtEdit
+带有Label的textInput组件
+#### props
+- 必写props 
+	- `title: string` label显示内容
+- 可选props
+	- `titleStyle:Object`label样式
+	- `style:Object`input部分样式
+	- `containerStyle:Object`整体样式
+
+### MtLabelBar
+带有label的内容展示横条
+#### props
+- 必写props
+	- `title:string` label显示内容
+-  可选props
+	- `value:string`与label相对应的值 	
+	- `titleStyle:Object`label样式
+	- `style:Object`value部分样式
+	- `disableIcon: bool`是否显示Icon
+	- `containerStyle:Object`整体样式 		
+
+	

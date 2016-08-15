@@ -22,6 +22,7 @@ const MartianUI = {
     MtBadge: require('./lib/Badge'),
     MtSwiper: require('./lib/Swiper'),
     MtEdit: require('./lib/Edit'),
+    MtLabelBar: require('./lib/LabelBar'),
     MtGrid: require('./lib/Grid')
 };
 

@@ -14,17 +14,20 @@ var {
 } = ReactNative;
 
 var MtChar = require('martian-ui').MtChar;
-var {MtText,MtHeading,MtLabel,MtT2,MtT3,MtL2,MtL3} = MtChar;
+const {
+    MtText, MtHeading, MtLabel, MtT2, MtT3,
+    MtL2, MtL3, MtL4, MtR4, MtW2, MtM2
+} = MtChar;
 var string = 'hello';
 
-exports.title  = 'MtChar';
+exports.title = 'MtChar';
 exports.description = 'Text is used to show some words.';
 exports.examples = [
     {
         title: 'Plain Text',
         render: function () {
             return (
-                <MtText style = { {textAlign:'center'}}>
+                <MtText style={ {textAlign: 'center'}}>
                     {string}
                 </MtText>
             );
@@ -51,6 +54,26 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain W2',
+        render: function () {
+            return (
+                <MtW2>
+                    I'm W2 字体
+                </MtW2>
+            );
+        },
+    },
+    {
+        title: 'Plain M2',
+        render: function () {
+            return (
+                <MtM2>
+                    I'm M2 字体
+                </MtM2>
+            );
+        },
+    },
+    {
         title: 'Plain T2',
         render: function () {
             return (
@@ -60,7 +83,7 @@ exports.examples = [
             );
         },
     },
-  {
+    {
         title: 'Plain T3',
         render: function () {
             return (
@@ -70,7 +93,7 @@ exports.examples = [
             );
         },
     },
-  {
+    {
         title: 'Plain L2',
         render: function () {
             return (
@@ -80,13 +103,33 @@ exports.examples = [
             );
         },
     },
-  {
+    {
         title: 'Plain L3',
         render: function () {
             return (
                 <MtL3>
                     I'm L3
                 </MtL3>
+            );
+        },
+    },
+    {
+        title: 'Plain L4',
+        render: function () {
+            return (
+                <MtL4>
+                    I'm L4
+                </MtL4>
+            );
+        },
+    },
+    {
+        title: 'Plain R4',
+        render: function () {
+            return (
+                <MtR4>
+                    I'm R4
+                </MtR4>
             );
         },
     },
