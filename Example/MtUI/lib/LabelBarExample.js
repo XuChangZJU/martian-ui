@@ -43,6 +43,18 @@ exports.examples = [
         }
     },
     {
+        title: 'Plain MtLabelBar with onPress',
+        render: function () {
+            return (
+                <MtLabelBar
+                    title="手机号码"
+                    value="18612345678"
+                    onPress={() => {alert('Hello'); }}
+                />
+            );
+        }
+    },
+    {
         title: 'Todo',
         render: function () {
             return (
