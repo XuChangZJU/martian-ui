@@ -16,7 +16,7 @@ var {
 var MtChar = require('martian-ui').MtChar;
 const {
     MtText, MtHeading, MtLabel, MtT2, MtT3,
-    MtL2, MtL3, MtL4, MtR4, MtW2, MtM2
+    MtL2, MtL3, MtL4, MtR4, MtW2, MtW3, MtM2
 } = MtChar;
 var string = 'hello';
 
@@ -60,6 +60,16 @@ exports.examples = [
                 <MtW2>
                     I'm W2 字体
                 </MtW2>
+            );
+        },
+    },
+    {
+        title: 'Plain W3',
+        render: function () {
+            return (
+                <MtW3>
+                    I'm W3 字体
+                </MtW3>
             );
         },
     },
