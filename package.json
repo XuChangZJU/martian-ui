@@ -1,7 +1,7 @@
 {
   "name": "martian-ui",
   "version": "1.0.0",
-  "description": "A UI components lib  for Martian Inc",
+  "description": "A UI components Kit for Martian Inc",
   "main": "index.js",
   "files": [
     "lib/*",

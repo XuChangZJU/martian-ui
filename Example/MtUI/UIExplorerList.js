@@ -25,10 +25,6 @@ export type UIExplorerExample = {
 var ComponentExamples: Array<UIExplorerExample> = [
   
   {
-    key: 'ImageExample',
-    module: require('./ImageExample')
-  },
-  {
     key: 'SeparatorExample',
     module: require('./lib/SeparatorExample')
   },
@@ -110,15 +106,15 @@ var ComponentExamples: Array<UIExplorerExample> = [
   },
   {
     key: 'ListViewPageExample',
-    module: require('./lib/ListViewPagingExample')
+    module: require('./lib/OfficialExample/ListViewPagingExample')
   },
   {
     key: 'PickerExample',
-    module: require('./lib/PickerExample')
+    module: require('./lib/OfficialExample/PickerExample')
   },
   {
     key: 'LayoutAnimationExample',
-    module: require('./lib/LayoutAnimationExample')
+    module: require('./lib/OfficialExample/LayoutAnimationExample')
   },
 
 

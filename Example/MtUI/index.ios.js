@@ -1,32 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * The examples provided by Facebook are for non-commercial testing and
- * evaluation purposes only.
- *
- * Facebook reserves all rights not expressly granted.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL
- * FACEBOOK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
- * AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * @providesModule UIExplorerApp
- * @flow
- */
 'use strict';
 
 const AsyncStorage = require('AsyncStorage');
@@ -40,23 +11,23 @@ const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
 const URIActionMap = require('./URIActionMap');
 
 const {
-  AppRegistry,
-  NavigationExperimental,
-  SnapshotViewIOS,
-  StyleSheet,
-  View,
+    AppRegistry,
+    NavigationExperimental,
+    SnapshotViewIOS,
+    StyleSheet,
+    View,
 } = ReactNative;
 
 const {
-  CardStack: NavigationCardStack,
-  Header: NavigationHeader,
+    CardStack: NavigationCardStack,
+    Header: NavigationHeader,
 } = NavigationExperimental;
 
 import type { NavigationSceneRendererProps } from 'NavigationTypeDefinition';
 
 import type { UIExplorerNavigationState } from './UIExplorerNavigationReducer';
 
-import type { UIExplorerExample } from './UIExplorerList';
+import type { UIExplorerExample } from './UIExplorerList.ios';
 
 type Props = {
   exampleFromAppetizeParams: string,
@@ -66,12 +37,15 @@ type State = UIExplorerNavigationState & {
   externalExample?: string,
 };
 
+const APP_STATE_KEY = 'UIExplorerAppState.v1';
+
 class UIExplorerApp extends React.Component {
+  _handleBack: Function;
+  _handleAction: Function;
+  _renderCard: Function;
   _renderOverlay: Function;
   _renderScene: Function;
-  _renderCard: Function;
   _renderTitleComponent: Function;
-  _handleAction: Function;
   state: State;
 
   constructor(props: Props) {
@@ -80,6 +54,7 @@ class UIExplorerApp extends React.Component {
 
   componentWillMount() {
     this._handleAction = this._handleAction.bind(this);
+    this._handleBack = this._handleAction.bind(this, {type: 'back'});
     this._renderOverlay = this._renderOverlay.bind(this);
     this._renderScene = this._renderScene.bind(this);
     this._renderTitleComponent = this._renderTitleComponent.bind(this);
@@ -87,7 +62,7 @@ class UIExplorerApp extends React.Component {
 
   componentDidMount() {
     Linking.getInitialURL().then((url) => {
-      AsyncStorage.getItem('UIExplorerAppState', (err, storedString) => {
+      AsyncStorage.getItem(APP_STATE_KEY, (err, storedString) => {
         const exampleAction = URIActionMap(this.props.exampleFromAppetizeParams);
         const urlAction = URIActionMap(url);
         const launchAction = exampleAction || urlAction;
@@ -117,7 +92,7 @@ class UIExplorerApp extends React.Component {
     const newState = UIExplorerNavigationReducer(this.state, action);
     if (this.state !== newState) {
       this.setState(newState);
-      AsyncStorage.setItem('UIExplorerAppState', JSON.stringify(this.state));
+      AsyncStorage.setItem(APP_STATE_KEY, JSON.stringify(this.state));
     }
   }
 
@@ -128,51 +103,52 @@ class UIExplorerApp extends React.Component {
     if (this.state.externalExample) {
       const Component = UIExplorerList.Modules[this.state.externalExample];
       return (
-        <Component
-          onExampleExit={() => {
+          <Component
+              onExampleExit={() => {
             this._handleAction({ type: 'BackAction' });
           }}
-        />
+          />
       );
     }
     return (
-      <NavigationCardStack
-        navigationState={this.state.stack}
-        style={styles.container}
-        renderOverlay={this._renderOverlay}
-        renderScene={this._renderScene}
-        onNavigate={this._handleAction}
-      />
+        <NavigationCardStack
+            navigationState={this.state.stack}
+            style={styles.container}
+            renderOverlay={this._renderOverlay}
+            renderScene={this._renderScene}
+
+        />
     );
   }
 
-  _renderOverlay(props: NavigationSceneRendererProps): ReactElement {
+  _renderOverlay(props: NavigationSceneRendererProps): ReactElement<any> {
     return (
-      <NavigationHeader
-        {...props}
-        renderTitleComponent={this._renderTitleComponent}
-      />
+        <NavigationHeader
+            {...props}
+            onNavigateBack={this._handleBack}
+            renderTitleComponent={this._renderTitleComponent}
+        />
     );
   }
 
-  _renderTitleComponent(props: NavigationSceneRendererProps): ReactElement {
+  _renderTitleComponent(props: NavigationSceneRendererProps): ReactElement<any> {
     return (
-      <NavigationHeader.Title>
-        {UIExplorerStateTitleMap(props.scene.navigationState)}
-      </NavigationHeader.Title>
+        <NavigationHeader.Title>
+          {UIExplorerStateTitleMap(props.scene.route)}
+        </NavigationHeader.Title>
     );
   }
 
-  _renderScene(props: NavigationSceneRendererProps): ?ReactElement {
-    const state = props.scene.navigationState;
+  _renderScene(props: NavigationSceneRendererProps): ?ReactElement<any> {
+    const state = props.scene.route;
     if (state.key === 'AppList') {
       return (
-        <UIExplorerExampleList
-          onNavigate={this._handleAction}
-          list={UIExplorerList}
-          style={styles.exampleContainer}
-          {...state}
-        />
+          <UIExplorerExampleList
+              onNavigate={this._handleAction}
+              list={UIExplorerList}
+              style={styles.exampleContainer}
+              {...state}
+          />
       );
     }
 
@@ -180,9 +156,9 @@ class UIExplorerApp extends React.Component {
     if (Example) {
       const Component = UIExplorerExampleList.makeRenderable(Example);
       return (
-        <View style={styles.exampleContainer}>
-          <Component />
-        </View>
+          <View style={styles.exampleContainer}>
+            <Component />
+          </View>
       );
     }
     return null;
@@ -199,8 +175,8 @@ const styles = StyleSheet.create({
   },
 });
 
-//AppRegistry.registerComponent('SetPropertiesExampleApp', () => require('./SetPropertiesExampleApp'));
-//AppRegistry.registerComponent('RootViewSizeFlexibilityExampleApp', () => require('./RootViewSizeFlexibilityExampleApp'));
+// AppRegistry.registerComponent('SetPropertiesExampleApp', () => require('./SetPropertiesExampleApp'));
+// AppRegistry.registerComponent('RootViewSizeFlexibilityExampleApp', () => require('./RootViewSizeFlexibilityExampleApp'));
 AppRegistry.registerComponent('MtUI', () => UIExplorerApp);
 
 // Register suitable examples for snapshot tests
@@ -211,9 +187,9 @@ UIExplorerList.ComponentExamples.concat(UIExplorerList.APIExamples).forEach((Exa
       render: function() {
         const Renderable = UIExplorerExampleList.makeRenderable(ExampleModule);
         return (
-          <SnapshotViewIOS>
-            <Renderable />
-          </SnapshotViewIOS>
+            <SnapshotViewIOS>
+              <Renderable />
+            </SnapshotViewIOS>
         );
       },
     });
