@@ -7,6 +7,7 @@ const MartianUI = {
     MtSeparator: require('./lib/Separator'),
     MtInput: require('./lib/Input'),
     MtButton: require('./lib/Button'),
+    MtFixedButton: require('./lib/FixedButton'),
     MtLoadingModal: require('./lib/LoadingModal'),
     MtListView: require('./lib/ListView'),
     MtChar: require('./lib/Text'),
@@ -23,6 +24,7 @@ const MartianUI = {
     MtSwiper: require('./lib/Swiper'),
     MtEdit: require('./lib/Edit'),
     MtLabelBar: require('./lib/LabelBar'),
+    MtFloatingBar: require('./lib/FloatingBar'),
     MtGrid: require('./lib/Grid')
 };
 

@@ -37,6 +37,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/ButtonExample')
   },
   {
+    key: 'FixedButtonExample',
+    module: require('./lib/FixedButtonExample')
+  },
+  {
     key: 'LoadingModalExample',
     module: require('./lib/LoadingModalExample')
   },
@@ -99,6 +103,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'LabelBarExample',
     module: require('./lib/LabelBarExample')
+  },
+  {
+    key: 'FloatingBarExample',
+    module: require('./lib/FloatingBarExample')
   },
   {
     key: 'GridExample',
