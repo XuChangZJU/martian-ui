@@ -15,8 +15,26 @@ var {
 
 var MtChar = require('martian-ui').MtChar;
 const {
-    MtText, MtHeading, MtLabel, MtT2, MtT3,
-    MtL2, MtL3, MtL4, MtR4, MtW2, MtW3, MtM2
+    MtText,
+    MtHeading,
+    MtLabel,
+    MtM1,
+    MtM2,
+    MtM3,
+    MtM4,
+    MtW2,
+    MtW3,
+    MtW4,
+    MtT2,
+    MtT3,
+    MtT4,
+    MtT8,
+    MtL2,
+    MtL3,
+    MtL8,
+    MtL4,
+    MtR4,
+    MtB4,
 } = MtChar;
 var string = 'hello';
 
@@ -74,12 +92,52 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain W4',
+        render: function () {
+            return (
+                <MtW4>
+                    I'm W4 字体
+                </MtW4>
+            );
+        },
+    },
+    {
+        title: 'Plain M1',
+        render: function () {
+            return (
+                <MtM1>
+                    I'm M1 字体
+                </MtM1>
+            );
+        },
+    },
+    {
         title: 'Plain M2',
         render: function () {
             return (
                 <MtM2>
                     I'm M2 字体
                 </MtM2>
+            );
+        },
+    },
+    {
+        title: 'Plain M3',
+        render: function () {
+            return (
+                <MtM3>
+                    I'm M3 字体
+                </MtM3>
+            );
+        },
+    },
+    {
+        title: 'Plain M4',
+        render: function () {
+            return (
+                <MtM4>
+                    I'm M4 字体
+                </MtM4>
             );
         },
     },
@@ -100,6 +158,26 @@ exports.examples = [
                 <MtT3>
                     I'm T3 字体
                 </MtT3>
+            );
+        },
+    },
+    {
+        title: 'Plain T4',
+        render: function () {
+            return (
+                <MtT4>
+                    I'm T4 字体
+                </MtT4>
+            );
+        },
+    },
+    {
+        title: 'Plain T8',
+        render: function () {
+            return (
+                <MtT8>
+                    I'm T8 字体
+                </MtT8>
             );
         },
     },
@@ -134,12 +212,32 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain L8',
+        render: function () {
+            return (
+                <MtL8>
+                    I'm L8
+                </MtL8>
+            );
+        },
+    },
+    {
         title: 'Plain R4',
         render: function () {
             return (
                 <MtR4>
                     I'm R4
                 </MtR4>
+            );
+        },
+    },
+    {
+        title: 'Plain B4',
+        render: function () {
+            return (
+                <MtB4>
+                    I'm B4
+                </MtB4>
             );
         },
     },
