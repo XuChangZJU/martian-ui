@@ -246,6 +246,16 @@ listview中在第一次网络请求前的空白页
 	- `titleStyle:Object`label样式
 	- `style:Object`value部分样式
 	- `disableIcon: bool`是否显示Icon
+	- `containerStyle:Object`整体样式
+	
+### MtFloatingBar
+带有倒计时功能的浮动横条
+#### props
+-  可选props
+	- `message:string`显示的内容 	
+	- `deadline:number`截止时间(单位:毫秒) 	
+	- `countdownMessage: func`倒计时显示内容
+	- `style:Object`文字样式
 	- `containerStyle:Object`整体样式 		
 
 	
