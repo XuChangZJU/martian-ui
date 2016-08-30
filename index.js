@@ -25,7 +25,7 @@ const MartianUI = {
     MtEdit: require('./lib/Edit'),
     MtLabelBar: require('./lib/LabelBar'),
     MtFloatingBar: require('./lib/FloatingBar'),
-    MtDateTime: require('./lib/DateTime'),
+    MtDateTimePicker: require('./lib/DateTime'),
     MtGrid: require('./lib/Grid')
 };
 
