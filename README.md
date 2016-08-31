@@ -277,5 +277,6 @@ android like 组件
         - `onHide: func`
         - `onHidden: func`
 - hide(handler)
+- [more detail](https://github.com/magicismight/react-native-root-toast)
 
 	
