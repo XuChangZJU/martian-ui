@@ -14,6 +14,9 @@ Before running the app, make sure you ran:
 ```js
 import {MtSeparator} from 'martian-ui'
 ```
+
+## Component
+
 ### MtSeparator
 用于两条Item之间的分离
 #### props：
@@ -257,5 +260,22 @@ listview中在第一次网络请求前的空白页
 	- `countdownMessage: func`倒计时显示内容
 	- `style:Object`文字样式
 	- `containerStyle:Object`整体样式 		
+
+## API Component	
+	
+### MtToast	
+android like 组件
+#### method
+- show(message:string, option:object)
+    - option
+        - `duration: number` 显示时间长短
+        - `position: number` 正数表示离顶部距离,负数表示离底部距离,0表示正中央
+        - `animation: bool` 是否有动画
+        - `shadow: bool` toast 元素是否有阴影
+        - `onShow: func`
+        - `onShown: func`
+        - `onHide: func`
+        - `onHidden: func`
+- hide(handler)
 
 	

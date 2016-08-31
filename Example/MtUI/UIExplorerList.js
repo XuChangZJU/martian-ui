@@ -109,6 +109,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/FloatingBarExample')
   },
   {
+    key: 'ToastExample',
+    module: require('./lib/ToastExample')
+  },
+  {
     key: 'GridExample',
     module: require('./lib/GridExample')
   },
