@@ -18,6 +18,16 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain FloatingBar2',
+        render: function () {
+            return (
+                <MtFloatingBar
+                    deadline={new Date().getTime()+ 1000 * 60 * ( 60 * 24 + 72) } //one day 61 minutes
+                />
+            );
+        },
+    },
+    {
         title: 'countdown FloatingBar',
         render: function () {
             return (
