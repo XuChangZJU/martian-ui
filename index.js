@@ -26,6 +26,7 @@ const MartianUI = {
     MtStateFlow: require('./lib/StateFlow'),
     MtSwiper: require('./lib/Swiper'),
     MtTabBar: require('./lib/TabBar'),
+    MtTextArea: require('./lib/TextArea'),
     MtToast: require('./lib/Toast'),
     MtGrid: require('./lib/Grid')
 };

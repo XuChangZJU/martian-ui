@@ -38,6 +38,19 @@ import {MtSeparator} from 'martian-ui'
 	- onChangeText
 	- secureTextEntry
 	- keyboardType
+	
+### MtTextArea
+多行输入框
+
+#### props
+- [View props](http://facebook.github.io/react-native/docs/textinput.html)
+- 禁用props：
+	- clearButtonMode
+	- multiline
+- 常用props：
+	- containerStyle 容器样式
+	- style
+	- hintStyle 右下角提示文字样式
 
 ### MtButton
 基本的Button
