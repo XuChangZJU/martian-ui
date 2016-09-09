@@ -17,6 +17,7 @@ const MartianUI = {
     MtFixedButton: require('./lib/FixedButton'),
     MtFloatingBar: require('./lib/FloatingBar'),
     MtInput: require('./lib/Input'),
+    MtKeyboardView: require('./lib/KeyboardView'),
     MtLabelBar: require('./lib/LabelBar'),
     MtListView: require('./lib/ListView'),
     MtLoadingModal: require('./lib/LoadingModal'),

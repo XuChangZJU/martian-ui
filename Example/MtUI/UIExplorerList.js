@@ -23,7 +23,7 @@ export type UIExplorerExample = {
 };
 
 var ComponentExamples: Array<UIExplorerExample> = [
-  
+
   {
     key: 'SeparatorExample',
     module: require('./lib/SeparatorExample')
@@ -115,6 +115,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'TextAreaExample',
     module: require('./lib/TextAreaExample')
+  },
+  {
+    key: 'KeyboardAvoidingExample',
+    module: require('./lib/KeyboardAvoidingExample/KeyboardAvoidingExample')
   },
   {
     key: 'GridExample',

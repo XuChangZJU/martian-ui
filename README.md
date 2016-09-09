@@ -292,4 +292,9 @@ android like 组件
 - hide(handler)
 - [more detail](https://github.com/magicismight/react-native-root-toast)
 
+### MtKeyboardView
+用于解决ios、android的键盘遮挡问题
+#### props
+单个TextInput和多个TextInput的解决方案详情在example中,注意注释中标注import的部分,为必写内容
+
 	
