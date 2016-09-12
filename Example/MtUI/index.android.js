@@ -1,4 +1,3 @@
-
 'use strict';
 
 const AppRegistry = require('AppRegistry');
@@ -15,9 +14,11 @@ const UIExplorerExampleList = require('./UIExplorerExampleList');
 const UIExplorerList = require('./UIExplorerList');
 const UIExplorerNavigationReducer = require('./UIExplorerNavigationReducer');
 const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
+const UIManager = require('UIManager');
 const URIActionMap = require('./URIActionMap');
 const View = require('View');
 
+UIManager.setLayoutAnimationEnabledExperimental(true);
 
 const DRAWER_WIDTH_LEFT = 56;
 
@@ -116,18 +117,18 @@ class UIExplorerApp extends React.Component {
           />
       );
     }
-    const title = UIExplorerStateTitleMap(stack.children[stack.index]);
-    const index = stack.children.length <= 1 ?  1 : stack.index;
+    const title = UIExplorerStateTitleMap(stack.routes[stack.index]);
+    const index = stack.routes.length <= 1 ?  1 : stack.index;
 
-    if (stack && stack.children[index]) {
-      const {key} = stack.children[index];
+    if (stack && stack.routes[index]) {
+      const {key} = stack.routes[index];
       const ExampleModule = UIExplorerList.Modules[key];
       const ExampleComponent = UIExplorerExampleList.makeRenderable(ExampleModule);
       return (
           <View style={styles.container}>
             <ToolbarAndroid
-                logo={require('./launcher_icon.png')}
-                navIcon={require('./ic_menu_black_24dp.png')}
+                logo={require('./img/launcher_icon.png')}
+                navIcon={require('./img/ic_menu_black_24dp.png')}
                 onIconClicked={() => this.drawer.openDrawer()}
                 style={styles.toolbar}
                 title={title}
@@ -141,8 +142,8 @@ class UIExplorerApp extends React.Component {
     return (
         <View style={styles.container}>
           <ToolbarAndroid
-              logo={require('./launcher_icon.png')}
-              navIcon={require('./ic_menu_black_24dp.png')}
+              logo={require('./img/launcher_icon.png')}
+              navIcon={require('./img/ic_menu_black_24dp.png')}
               onIconClicked={() => this.drawer.openDrawer()}
               style={styles.toolbar}
               title={title}
@@ -150,7 +151,7 @@ class UIExplorerApp extends React.Component {
           <UIExplorerExampleList
               onNavigate={this._handleAction}
               list={UIExplorerList}
-              {...stack.children[0]}
+              {...stack.routes[0]}
           />
         </View>
     );
@@ -184,11 +185,7 @@ class UIExplorerApp extends React.Component {
     }
     return this._handleAction({ type: 'BackAction' });
   }
-
-
-
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -204,7 +201,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 });
-
 
 AppRegistry.registerComponent('MtUI', () => UIExplorerApp);
 

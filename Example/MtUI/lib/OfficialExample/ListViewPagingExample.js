@@ -34,18 +34,18 @@ var {
 } = NativeModules;
 
 var THUMB_URLS = [
-  require('./Thumbnails/like.png'),
-  require('./Thumbnails/dislike.png'),
-  require('./Thumbnails/call.png'),
-  require('./Thumbnails/fist.png'),
-  require('./Thumbnails/bandaged.png'),
-  require('./Thumbnails/flowers.png'),
-  require('./Thumbnails/heart.png'),
-  require('./Thumbnails/liking.png'),
-  require('./Thumbnails/party.png'),
-  require('./Thumbnails/poke.png'),
-  require('./Thumbnails/superlike.png'),
-  require('./Thumbnails/victory.png'),
+  require('./../Thumbnails/like.png'),
+  require('./../Thumbnails/dislike.png'),
+  require('./../Thumbnails/call.png'),
+  require('./../Thumbnails/fist.png'),
+  require('./../Thumbnails/bandaged.png'),
+  require('./../Thumbnails/flowers.png'),
+  require('./../Thumbnails/heart.png'),
+  require('./../Thumbnails/liking.png'),
+  require('./../Thumbnails/party.png'),
+  require('./../Thumbnails/poke.png'),
+  require('./../Thumbnails/superlike.png'),
+  require('./../Thumbnails/victory.png'),
 ];
 var NUM_SECTIONS = 5;
 var NUM_ROWS_PER_SECTION = 10;

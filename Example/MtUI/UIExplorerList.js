@@ -23,11 +23,7 @@ export type UIExplorerExample = {
 };
 
 var ComponentExamples: Array<UIExplorerExample> = [
-  
-  {
-    key: 'ImageExample',
-    module: require('./ImageExample')
-  },
+
   {
     key: 'SeparatorExample',
     module: require('./lib/SeparatorExample')
@@ -39,6 +35,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'ButtonExample',
     module: require('./lib/ButtonExample')
+  },
+  {
+    key: 'FixedButtonExample',
+    module: require('./lib/FixedButtonExample')
   },
   {
     key: 'LoadingModalExample',
@@ -83,19 +83,60 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'RadioButtonExample',
     module: require('./lib/RadioButtonExample')
+  }, 
+  {
+    key: 'EditableItemPanelExample',
+    module: require('./lib/EditableItemPanelExample')
   },
   {
-    key: 'ListViewPageExample',
-    module: require('./lib/ListViewPagingExample')
+    key: 'BadgeExample',
+    module: require('./lib/BadgeExample')
+  }, 
+  {
+    key: 'SwiperExample',
+    module: require('./lib/SwiperExample')
   },
   {
-    key: 'PickerExample',
-    module: require('./lib/PickerExample')
+    key: 'EditExample',
+    module: require('./lib/EditExample')
+  },
+  {
+    key: 'LabelBarExample',
+    module: require('./lib/LabelBarExample')
+  },
+  {
+    key: 'FloatingBarExample',
+    module: require('./lib/FloatingBarExample')
+  },
+  {
+    key: 'ToastExample',
+    module: require('./lib/ToastExample')
+  },
+  {
+    key: 'TextAreaExample',
+    module: require('./lib/TextAreaExample')
+  },
+  {
+    key: 'KeyboardAvoidingExample',
+    module: require('./lib/KeyboardAvoidingExample/KeyboardAvoidingExample')
   },
   {
     key: 'GridExample',
     module: require('./lib/GridExample')
   },
+  {
+    key: 'ListViewPageExample',
+    module: require('./lib/OfficialExample/ListViewPagingExample')
+  },
+  {
+    key: 'PickerExample',
+    module: require('./lib/OfficialExample/PickerExample')
+  },
+  {
+    key: 'LayoutAnimationExample',
+    module: require('./lib/OfficialExample/LayoutAnimationExample')
+  },
+
 
   
 ];

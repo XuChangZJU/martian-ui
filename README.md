@@ -14,6 +14,9 @@ Before running the app, make sure you ran:
 ```js
 import {MtSeparator} from 'martian-ui'
 ```
+
+## Component
+
 ### MtSeparator
 用于两条Item之间的分离
 #### props：
@@ -35,6 +38,19 @@ import {MtSeparator} from 'martian-ui'
 	- onChangeText
 	- secureTextEntry
 	- keyboardType
+	
+### MtTextArea
+多行输入框
+
+#### props
+- [View props](http://facebook.github.io/react-native/docs/textinput.html)
+- 禁用props：
+	- clearButtonMode
+	- multiline
+- 常用props：
+	- containerStyle 容器样式
+	- style
+	- hintStyle 右下角提示文字样式
 
 ### MtButton
 基本的Button
@@ -46,6 +62,17 @@ import {MtSeparator} from 'martian-ui'
 	- `style：object` button中文字的文字样式
 	- `containerStyle：object` button背景样式
 
+### MtFixedButton
+固定于页面底部的Button
+#### props
+- 常用props：
+	- `onPress：function `点击所触发的动作
+	- ` disabled：bool` button是否可以点击。false=可以
+- 可选props：
+	- `style：object` button中文字的文字样式
+	- `foreground：string` button中背景颜色深浅
+	- `containerStyle：object` button背景样式
+	
 ### MtLoadingModal
 loadingModal
 
@@ -68,9 +95,26 @@ import {MtChar} from 'martian-ui';
 let {MtText,MtHeading,MtLabel} = MtChar;
 ```
 #### 组件
-- MtText：普通文字
+- MtText：普通文字 14号 颜色#b4b4b4
 - MtHeading 标题
-- MtLabel： 标签
+- MtLabel： 标签 14号 颜色#262626
+- MtM1：16号 颜色#ff630e
+- MtM2：14号 颜色#ff630e
+- MtM3：12号 颜色#ff630e
+- MtM4：10号 颜色#ff630e
+- MtW2：14号 颜色white
+- MtW3：12号 颜色white
+- MtW4：10号 颜色white
+- MtT2：14号 颜色#262626
+- MtT3：12号 颜色#262626
+- MtT4：10号 颜色#262626
+- MtT8：11号 颜色#262626
+- MtL2：14号 颜色#8f8f8f
+- MtL3：12号 颜色#8f8f8f
+- MtL4：10号 颜色#8f8f8f
+- MtL8：11号 颜色#8f8f8f
+- MtR4：10号 颜色#ff0000
+- MtB4：10号 颜色#3aa1ee
 
 
 #### props 
@@ -155,6 +199,102 @@ listview中在第一次网络请求前的空白页
 	- `onSelect:function(selectedOption,selectedIndex)` 选中时的回调
 - 可选options
 	- `renderOption:function(option,selected,onSelect,index)` 应返回一个选项node，默认node为选项值，被选中时有对勾
+	- `transformOption:function(option)`当option为obj时，可以选择option的显示值
+	- `testOptionEqual:function(option1,option2)`配合transformOption使用，判断option是否相等
 	- `renderContainer:function(optionNodes)`
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
 	- `selectedindex` 初始选中下标
+
+### MtEditablePanel
+可选择多项面板
+#### props
+- 必写props
+	- `items:array` 多项数组
+	- `renderItem:function(item,index,editable,itemSize)`  **最好**和renderItem的大小一致（因为item默认居中布局，否则容易有空白)
+- 可选props
+	- `editable:bool`是否可编辑，默认为false
+	- `onClickInEditing:function(item,index,selected)`在可编辑状态下点击每项的回调函数
+	- `onClick(item,index)` 在不可编辑状态下点击每项的回调函数,默认为全屏显示该项
+	- `containerStyle:Object`面板样式，通常情况可不写，一般写时只需决定是否有边框
+	- `disableAdd:bool`:是否有尾部加号框，默认为false
+	- `onAdd:function` 点击尾部加号框时的回调
+	- `itemSize:number`每项的大小（暂只为方形）
+
+### MtBadge
+消息数量展示
+#### props
+- 必写props
+	- `number:number`数量
+- 可选props
+	- `style`文字样式
+	- `containerStyle`文字外围容器样式
+
+### MtSwiper
+轮播组件，可用于显示图片、广告等
+#### props
+- 可选props
+	- `height:number`整个组件高度，默认flex：1
+	- `width:number`整个组件宽度，默认flex：1
+	- `style:object`整个组件样式
+	- `dotStyle:object`小点的样式
+	- `activeDotStyle:object`小点激活时的样式
+	- `renderPagination:function`:页码完全自定义渲染函数（Android对absolute为负值支持有问题）
+	- `autoplay:bool`是否自动播放
+-  [More detail props](https://github.com/leecade/react-native-swiper)
+
+### MtEdit
+带有Label的textInput组件
+#### props
+- 必写props 
+	- `title: string` label显示内容
+- 可选props
+	- `titleStyle:Object`label样式
+	- `style:Object`input部分样式
+	- `containerStyle:Object`整体样式
+
+### MtLabelBar
+带有label的内容展示横条
+#### props
+- 必写props
+	- `title:string` label显示内容
+-  可选props
+	- `value:string`与label相对应的值 	
+	- `titleStyle:Object`label样式
+	- `style:Object`value部分样式
+	- `disableIcon: bool`是否显示Icon
+	- `containerStyle:Object`整体样式
+	
+### MtFloatingBar
+带有倒计时功能的浮动横条
+#### props
+-  可选props
+	- `message:string`显示的内容 	
+	- `deadline:number`截止时间(单位:毫秒) 	
+	- `countdownMessage: func`倒计时显示内容
+	- `style:Object`文字样式
+	- `containerStyle:Object`整体样式 		
+
+## API Component	
+	
+### MtToast	
+android like 组件
+#### method
+- show(message:string, option:object)
+    - option
+        - `duration: number` 显示时间长短
+        - `position: number` 正数表示离顶部距离,负数表示离底部距离,0表示正中央
+        - `animation: bool` 是否有动画
+        - `shadow: bool` toast 元素是否有阴影
+        - `onShow: func`
+        - `onShown: func`
+        - `onHide: func`
+        - `onHidden: func`
+- hide(handler)
+- [more detail](https://github.com/magicismight/react-native-root-toast)
+
+### MtKeyboardView
+用于解决ios、android的键盘遮挡问题
+#### props
+单个TextInput和多个TextInput的解决方案详情在example中,注意注释中标注import的部分,为必写内容
+
+	

@@ -1,7 +1,7 @@
 {
   "name": "martian-ui",
   "version": "1.0.0",
-  "description": "A UI components lib  for Martian Inc",
+  "description": "A UI components Kit for Martian Inc",
   "main": "index.js",
   "files": [
     "lib/*",
@@ -27,7 +27,9 @@
   "dependencies": {
     "react-native-button": "^1.6.0",
     "react-native-radio-buttons": "^0.12.1",
+    "react-native-root-toast": "^1.0.3",
     "react-native-scrollable-tab-view": "^0.5.1",
+    "react-native-swiper": "^1.4.8",
     "react-native-vector-icons": "^2.0.3"
   }
 }

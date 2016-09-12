@@ -113,5 +113,25 @@ exports.examples = [
       );
     }
   },
+  {
+    title:'NavBar with custom component',
+    render():ReactElement {
+      let leftItem = {
+        renderItem: () => (<Text style={{color: 'white'}}>hello</Text>),
+        onPress:() => {alert('go back')},
+      };
+      let rightItem = {
+        icon: require('./img/settings_white.png'),
+        onPress:() => {alert('setting')}
+      };
+      return (
+        <MtNavBar
+          leftItem={leftItem}
+          rightItem = {rightItem}
+        >
+        </MtNavBar>
+      );
+    }
+  },
 
 ];

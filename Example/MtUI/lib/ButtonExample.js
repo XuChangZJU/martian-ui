@@ -25,7 +25,7 @@ exports.examples = [
                 <MtButton
                     onPress ={() => {Alert.alert(null,'I\'m a button')} }
                 >
-                    Press Me
+                    点我
                 </MtButton>
             );
         }
