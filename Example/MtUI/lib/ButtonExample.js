@@ -44,6 +44,19 @@ exports.examples = [
         }
     },
     {
+        title: 'Custom containerStyle',
+        render: function () {
+            return (
+                <MtButton
+                    containerStyle={{ backgroundColor: 'green', marginTop: 5, }}
+                    onPress ={() => {Alert.alert(null,'I\'m a button')} }
+                >
+                    dark background
+                </MtButton>
+            );
+        }
+    },
+    {
         title: 'double MtButton',
         render: function () {
             return (
