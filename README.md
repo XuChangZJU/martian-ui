@@ -108,6 +108,7 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - MtT2：14号 颜色#262626
 - MtT3：12号 颜色#262626
 - MtT4：10号 颜色#262626
+- MtT6：15号 颜色#262626
 - MtT8：11号 颜色#262626
 - MtL2：14号 颜色#8f8f8f
 - MtL3：12号 颜色#8f8f8f
@@ -262,6 +263,7 @@ listview中在第一次网络请求前的空白页
 	- `titleStyle:Object`label样式
 	- `style:Object`value部分样式
 	- `disableIcon: bool`是否显示Icon
+	- `disablePress: bool`是否可以点击
 	- `containerStyle:Object`整体样式
 	
 ### MtFloatingBar

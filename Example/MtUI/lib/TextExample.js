@@ -28,6 +28,7 @@ const {
     MtT2,
     MtT3,
     MtT4,
+    MtT6,
     MtT8,
     MtL2,
     MtL3,
@@ -168,6 +169,16 @@ exports.examples = [
                 <MtT4>
                     I'm T4 字体
                 </MtT4>
+            );
+        },
+    },
+    {
+        title: 'Plain T6',
+        render: function () {
+            return (
+                <MtT6>
+                    I'm T6 字体
+                </MtT6>
             );
         },
     },
