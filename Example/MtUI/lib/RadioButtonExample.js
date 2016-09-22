@@ -61,7 +61,7 @@ const RadioButtonExample = React.createClass({
             </Text>
           </View>
         </UIExplorerBlock>
-        <UIExplorerBlock title="RadioButton with custom mapOption">
+        <UIExplorerBlock title="RadioButton with custom transformOption">
           <View style={{ paddingTop: 20}}>
             <RadioButton
               options = {[{id:1,name:'option1'}, {id:2, name:'option2'},{id:4, name:'option3'}]}

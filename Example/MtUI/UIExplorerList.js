@@ -23,107 +23,112 @@ export type UIExplorerExample = {
 };
 
 var ComponentExamples: Array<UIExplorerExample> = [
-
   {
-    key: 'SeparatorExample',
-    module: require('./lib/SeparatorExample')
-  },
-  {
-    key: 'InputExample',
-    module: require('./lib/InputExample')
+    key: 'BadgeExample',
+    module: require('./lib/BadgeExample')
   },
   {
     key: 'ButtonExample',
     module: require('./lib/ButtonExample')
   },
   {
-    key: 'FixedButtonExample',
-    module: require('./lib/FixedButtonExample')
-  },
-  {
-    key: 'LoadingModalExample',
-    module: require('./lib/LoadingModalExample')
-  },
-  {
-    key: 'ListViewExample',
-    module: require('./lib/ListViewExample')
-  },
-  {
-  	key: 'TextExample',
-    module: require('./lib/TextExample'),
-  },
-  {
     key: 'CaptchaExample',
     module: require('./lib/CaptchaExample'),
   },
   {
-    key: 'NavBarExample',
-    module: require('./lib/NavBarExample')
+    key: 'CheckBoxExample',
+    module: require('./lib/CheckBoxExample'),
+  },
+  {
+    key: 'CircleViewExample',
+    module: require('./lib/CircleViewExample')
   },
   {
     key: 'ContainerExample',
     module: require('./lib/ContainerExample')
   },
   {
-    key: 'TabBarExample',
-    module: require('./lib/TabBarExample/TabBarExample')
+    key: 'EditExample',
+    module: require('./lib/EditExample')
   },
-  {
-    key: 'EmptyViewExample',
-    module: require('./lib/EmptyViewExample')
-  }, 
-  {
-    key: 'CircleViewExample',
-    module: require('./lib/CircleViewExample')
-  },
-  {
-    key: 'StateFlowExample',
-    module: require('./lib/StateFlowExample')
-  },
-  {
-    key: 'RadioButtonExample',
-    module: require('./lib/RadioButtonExample')
-  }, 
   {
     key: 'EditableItemPanelExample',
     module: require('./lib/EditableItemPanelExample')
   },
   {
-    key: 'BadgeExample',
-    module: require('./lib/BadgeExample')
-  }, 
-  {
-    key: 'SwiperExample',
-    module: require('./lib/SwiperExample')
+    key: 'EmptyViewExample',
+    module: require('./lib/EmptyViewExample')
   },
   {
-    key: 'EditExample',
-    module: require('./lib/EditExample')
-  },
-  {
-    key: 'LabelBarExample',
-    module: require('./lib/LabelBarExample')
+    key: 'FixedButtonExample',
+    module: require('./lib/FixedButtonExample')
   },
   {
     key: 'FloatingBarExample',
     module: require('./lib/FloatingBarExample')
   },
   {
-    key: 'ToastExample',
-    module: require('./lib/ToastExample')
-  },
-  {
-    key: 'TextAreaExample',
-    module: require('./lib/TextAreaExample')
+    key: 'InputExample',
+    module: require('./lib/InputExample')
   },
   {
     key: 'KeyboardAvoidingExample',
     module: require('./lib/KeyboardAvoidingExample/KeyboardAvoidingExample')
   },
   {
+    key: 'LabelBarExample',
+    module: require('./lib/LabelBarExample')
+  },
+  {
+    key: 'ListViewExample',
+    module: require('./lib/ListViewExample')
+  },
+  {
+    key: 'LoadingModalExample',
+    module: require('./lib/LoadingModalExample')
+  },
+  {
+    key: 'NavBarExample',
+    module: require('./lib/NavBarExample')
+  },
+  {
+    key: 'RadioButtonExample',
+    module: require('./lib/RadioButtonExample')
+  },
+  {
+    key: 'SeparatorExample',
+    module: require('./lib/SeparatorExample')
+  },
+  {
+    key: 'StateFlowExample',
+    module: require('./lib/StateFlowExample')
+  },
+  {
+    key: 'SwiperExample',
+    module: require('./lib/SwiperExample')
+  },
+  {
+    key: 'TabBarExample',
+    module: require('./lib/TabBarExample/TabBarExample')
+  },
+  {
+  	key: 'TextExample',
+    module: require('./lib/TextExample'),
+  },
+  {
+    key: 'TextAreaExample',
+    module: require('./lib/TextAreaExample')
+  },
+  {
+    key: 'ToastExample',
+    module: require('./lib/ToastExample')
+  },
+ // undo component
+  {
     key: 'GridExample',
     module: require('./lib/GridExample')
   },
+    // officialExample
   {
     key: 'ListViewPageExample',
     module: require('./lib/OfficialExample/ListViewPagingExample')
@@ -138,7 +143,6 @@ var ComponentExamples: Array<UIExplorerExample> = [
   },
 
 
-  
 ];
 
 const APIExamples = [

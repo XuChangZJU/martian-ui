@@ -8,6 +8,7 @@ const MartianUI = {
     MtButton: require('./lib/Button'),
     MtCaptcha: require('./lib/Captcha'),
     MtChar: require('./lib/Text'),
+    MtCheckBox: require('./lib/CheckBox'),
     MtCircleView: require('./lib/CircleView'),
     MtContainer: require('./lib/Container'),
     MtDateTimePicker: require('./lib/DateTime'),
