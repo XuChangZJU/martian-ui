@@ -14,6 +14,7 @@ var {
 } = ReactNative;
 
 var MtInput = require('martian-ui').MtInput;
+let a;
 
 exports.title  = 'MtInput';
 exports.description = 'basic single-line text inputs';
@@ -23,6 +24,39 @@ exports.examples = [
         render: function () {
             return (
                <MtInput >
+               </MtInput>
+            );
+        }
+    },
+    {
+        title: 'Test MtInput',
+        render: function () {
+            return (
+               <MtInput
+                   value={undefined}
+               >
+               </MtInput>
+            );
+        }
+    },
+    {
+        title: 'Test MtInput2',
+        render: function () {
+            return (
+               <MtInput
+                   defaultValue={a}
+               >
+               </MtInput>
+            );
+        }
+    },
+    {
+        title: 'Test MtInput3',
+        render: function () {
+            return (
+               <MtInput
+                   defaultValue={null}
+               >
                </MtInput>
             );
         }
