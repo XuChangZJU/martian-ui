@@ -139,7 +139,8 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - 常用props：
  	- `leftItem:Object`  左Item
 	 	- `title`:
-	 	- `icon`:当有title且无layout时disable
+	 	- `image`:当有title且无layout时disable
+	 	- `icon`:
 	 	- `onPress`:
 	 	- `layout`:设为icon,则tilte为disable
  	- `title:string` 导航栏标题

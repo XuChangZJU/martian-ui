@@ -3,7 +3,7 @@
  */
 
 import React, {Component, PropTypes} from "react";
-import {Alert, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Alert, StyleSheet, Text, TouchableOpacity, View, Dimensions} from "react-native";
 const EditableItemPanel = require('martian-ui').MtEditableItemPanel;
 // import { MtEditableItemPanel } from 'martian-ui';
 const UIExplorerBlock = require('UIExplorerBlock');
@@ -11,6 +11,10 @@ const UIExplorerPage = require('UIExplorerPage');
 
 const items = [];
 for ( let i=0;i<10; i++) items.push({id:i,name:`name${i}` });
+
+const WINDOW_WIDTH = Dimensions.get('window').width;
+// const itemSize = 91;
+const itemSize = (WINDOW_WIDTH -6) / 4;
 
 const EditableItemPanelExample = React.createClass({
   statics: {
@@ -29,20 +33,25 @@ const EditableItemPanelExample = React.createClass({
   render() {
     return (
       <UIExplorerPage title="MtEditableItemPanel">
-        <UIExplorerBlock title="Plain EditableItemPanel with non-editable">
-          <View style={{ paddingTop: 20}}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.titleText}>
+              Plain EditableItemPanel with non-editable
+            </Text>
+          </View>
             <EditableItemPanel
               items = {this.state.selected1}
               renderItem={renderItem}
               onClick = {(item)=>{alert(item.name)}}
-              itemSize={75}
+              itemSize={itemSize}
               onAdd={() => {alert('hello')}}
-            >
-            </EditableItemPanel>
-          </View>
-        </UIExplorerBlock>
-        <UIExplorerBlock title="EditableItemPanel with custom editable item">
-          <View style={{ paddingTop: 20}}>
+            />
+        <View style={{height:20}} />
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleText}>
+            EditableItemPanel with custom editable item
+          </Text>
+        </View>
+          <View style={{ paddingTop: 2}}>
             <TouchableOpacity onPress={() => {this.setState({editable1: !this.state.editable1,selected2:null}); }}>
               <View style={styles.button}>
                 <Text>{this.state.editable1 ? 'finish': 'Edit Item'}</Text>
@@ -52,7 +61,7 @@ const EditableItemPanelExample = React.createClass({
               items = {this.state.selected1}
               renderItem={renderItem}
               onClickInEditing = {this.setSelectedValue.bind(this, 'selected2')}
-              itemSize={75}
+              itemSize={itemSize}
               editable={this.state.editable1}
               onAdd={() => {alert('hello')}}
             >
@@ -64,7 +73,6 @@ const EditableItemPanelExample = React.createClass({
               {`your last choice status is: ${this.state.selected2 && this.state.selected2.selected}`}
             </Text>
           </View>
-        </UIExplorerBlock>
       </UIExplorerPage>
     );
   },
@@ -92,8 +100,8 @@ function renderItem(item,index,editable) {
 const styles = StyleSheet.create({
   item: {
     backgroundColor: 'red',
-    height: 75,
-    width: 75,
+    height: itemSize,
+    width: itemSize,
   },
   text: {
     color: 'white',
@@ -104,6 +112,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#eeeeee',
     padding: 10,
     marginBottom: 10,
+  },
+  titleContainer: {
+    borderBottomWidth: 0.5,
+    borderTopLeftRadius: 3,
+    borderTopRightRadius: 2.5,
+    borderBottomColor: '#d6d7da',
+    backgroundColor: '#f6f7f8',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    marginBottom: 10,
+  },
+  titleText: {
+    fontSize: 14,
+    fontWeight: '500',
   },
 });
 
