@@ -10,7 +10,7 @@ import SingleInputExample from './SingleInputExample';
 
 var Sample = React.createClass({
     statics: {
-        title: 'KeyboardAvoidingView',
+        title: 'MtKeyboardView',
         description: 'Base component for views that automatically or manually adjust their height or position to move out of the way of the keyboard.'
     },
 
