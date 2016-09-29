@@ -19,6 +19,26 @@ exports.examples = [
         }
     },
     {
+        title: 'Plain MtEdit',
+        render: function () {
+            return (
+                <MtEdit
+                    title="三个字"
+                />
+            );
+        }
+    },
+    {
+        title: 'Plain MtEdit',
+        render: function () {
+            return (
+                <MtEdit
+                    title="海阔天空"
+                />
+            );
+        }
+    },
+    {
         title: 'Todo',
         render: function () {
             return (
