@@ -159,7 +159,7 @@ const NavBarExample = React.createClass({
         onPress:() => {alert('go back')},
       };
       let rightItem2 = {
-        title:'right',
+        title:'添加',
         onPress:() => {alert('setting')}
       };
 
