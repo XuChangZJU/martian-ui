@@ -17,6 +17,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+  
+  [[RCTBundleURLProvider sharedSettings] setDefaults];
+#if DEBUG
+  [[RCTBundleURLProvider sharedSettings] setJsLocation:@"192.168.10.108"];
+#endif
+  
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
