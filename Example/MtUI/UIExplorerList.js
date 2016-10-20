@@ -123,6 +123,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'ToastExample',
     module: require('./lib/ToastExample')
   },
+  {
+    key: 'Demo',
+    module: require('./lib/Demo')
+  },
  // undo component
   {
     key: 'GridExample',
