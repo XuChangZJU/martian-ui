@@ -24,6 +24,10 @@ export type UIExplorerExample = {
 
 var ComponentExamples: Array<UIExplorerExample> = [
   {
+    key: 'ActionButtonExample',
+    module: require('./lib/ActionButtonExample')
+  },
+  {
     key: 'BadgeExample',
     module: require('./lib/BadgeExample')
   },

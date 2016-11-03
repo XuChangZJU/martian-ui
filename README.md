@@ -73,6 +73,17 @@ import {MtSeparator} from 'martian-ui'
 	- `foreground：string` button中背景颜色深浅
 	- `containerStyle：object` button背景样式
 	
+### MtActionButton
+固定于页面底部的Button
+#### props
+- 常用props：
+	- `onPress：function `点击所触发的动作
+	- ` disabled：bool` button是否可以点击。false=可以
+- 可选props：
+	- `style：object` button中文字的文字样式
+	- `foreground：string` button中边框颜色是否为浅色
+	- `containerStyle：object` button背景样式	
+	
 ### MtLoadingModal
 loadingModal
 

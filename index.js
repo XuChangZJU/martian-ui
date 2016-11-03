@@ -4,6 +4,7 @@
 // Export React, plus some native additions.
 const MartianUI = {
     // Components
+    MtActionButton: require('./lib/ActionButton'),
     MtBadge: require('./lib/Badge'),
     MtButton: require('./lib/Button'),
     MtCaptcha: require('./lib/Captcha'),
