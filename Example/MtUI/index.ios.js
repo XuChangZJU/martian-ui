@@ -5,6 +5,7 @@ const Linking = require('Linking');
 const React = require('react');
 const ReactNative = require('react-native');
 const UIExplorerList = require('./UIExplorerList');
+const UIExplorerExampleContainer = require('./UIExplorerExampleContainer');
 const UIExplorerExampleList = require('./UIExplorerExampleList');
 const UIExplorerNavigationReducer = require('./UIExplorerNavigationReducer');
 const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
@@ -43,7 +44,7 @@ class UIExplorerApp extends React.Component {
   _handleBack: Function;
   _handleAction: Function;
   _renderCard: Function;
-  _renderOverlay: Function;
+  _renderHeader: Function;
   _renderScene: Function;
   _renderTitleComponent: Function;
   state: State;
@@ -55,7 +56,7 @@ class UIExplorerApp extends React.Component {
   componentWillMount() {
     this._handleAction = this._handleAction.bind(this);
     this._handleBack = this._handleAction.bind(this, {type: 'back'});
-    this._renderOverlay = this._renderOverlay.bind(this);
+    this._renderHeader = this._renderHeader.bind(this);
     this._renderScene = this._renderScene.bind(this);
     this._renderTitleComponent = this._renderTitleComponent.bind(this);
   }
@@ -114,14 +115,15 @@ class UIExplorerApp extends React.Component {
         <NavigationCardStack
             navigationState={this.state.stack}
             style={styles.container}
-            renderOverlay={this._renderOverlay}
+            renderHeader={this._renderHeader}
             renderScene={this._renderScene}
-
+            onNavigateBack={this._handleBack}
         />
     );
   }
 
-  _renderOverlay(props: NavigationSceneRendererProps): ReactElement<any> {
+
+  _renderHeader(props: NavigationSceneRendererProps): ReactElement<any> {
     return (
         <NavigationHeader
             {...props}
@@ -154,10 +156,9 @@ class UIExplorerApp extends React.Component {
 
     const Example = UIExplorerList.Modules[state.key];
     if (Example) {
-      const Component = UIExplorerExampleList.makeRenderable(Example);
       return (
           <View style={styles.exampleContainer}>
-            <Component />
+            <UIExplorerExampleContainer module={Example} />
           </View>
       );
     }
@@ -171,7 +172,6 @@ const styles = StyleSheet.create({
   },
   exampleContainer: {
     flex: 1,
-    paddingTop: NavigationHeader.HEIGHT,
   },
 });
 
