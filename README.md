@@ -113,6 +113,7 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - MtM2：14号 颜色#ff630e
 - MtM3：12号 颜色#ff630e
 - MtM4：10号 颜色#ff630e
+- MtM8：11号 颜色#ff630e
 - MtW2：14号 颜色white
 - MtW3：12号 颜色white
 - MtW4：10号 颜色white

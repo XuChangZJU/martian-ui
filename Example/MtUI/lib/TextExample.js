@@ -22,6 +22,7 @@ const {
     MtM2,
     MtM3,
     MtM4,
+    MtM8,
     MtW2,
     MtW3,
     MtW4,
@@ -139,6 +140,16 @@ exports.examples = [
                 <MtM4>
                     I'm M4 字体
                 </MtM4>
+            );
+        },
+    },
+    {
+        title: 'Plain M8',
+        render: function () {
+            return (
+                <MtM8>
+                    I'm M8 字体
+                </MtM8>
             );
         },
     },
