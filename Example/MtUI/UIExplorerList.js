@@ -44,6 +44,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/CheckBoxExample'),
   },
   {
+    key: 'CheckItemExample',
+    module: require('./lib/CheckItemExample'),
+  },
+  {
     key: 'CircleViewExample',
     module: require('./lib/CircleViewExample')
   },

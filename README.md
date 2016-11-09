@@ -219,6 +219,18 @@ listview中在第一次网络请求前的空白页
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
 	- `selectedindex` 初始选中下标
 
+###MtCheckItem
+选中按钮
+#### props
+- 必写props
+   - `checked:bool`:是否选中
+   - `onPress: function(checked)`
+- 可选props
+    - `size:number`大小
+    - `backgroundColor: string`背景颜色
+    - `iconColor: string`图标颜色
+    - `borderColor: string` 边框颜色
+
 ### MtCheckBox
 多选多按钮
 #### props
