@@ -73,6 +73,17 @@ import {MtSeparator} from 'martian-ui'
 	- `foreground：string` button中背景颜色深浅
 	- `containerStyle：object` button背景样式
 	
+### MtActionButton
+固定于页面底部的Button
+#### props
+- 常用props：
+	- `onPress：function `点击所触发的动作
+	- ` disabled：bool` button是否可以点击。false=可以
+- 可选props：
+	- `style：object` button中文字的文字样式
+	- `foreground：string` button中边框颜色是否为浅色
+	- `containerStyle：object` button背景样式	
+	
 ### MtLoadingModal
 loadingModal
 
@@ -102,6 +113,7 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 - MtM2：14号 颜色#ff630e
 - MtM3：12号 颜色#ff630e
 - MtM4：10号 颜色#ff630e
+- MtM8：11号 颜色#ff630e
 - MtW2：14号 颜色white
 - MtW3：12号 颜色white
 - MtW4：10号 颜色white
@@ -206,6 +218,18 @@ listview中在第一次网络请求前的空白页
 	- `renderContainer:function(optionNodes)`
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
 	- `selectedindex` 初始选中下标
+
+###MtCheckItem
+选中按钮
+#### props
+- 必写props
+   - `checked:bool`:是否选中
+   - `onPress: function(checked)`
+- 可选props
+    - `size:number`大小
+    - `backgroundColor: string`背景颜色
+    - `iconColor: string`图标颜色
+    - `borderColor: string` 边框颜色
 
 ### MtCheckBox
 多选多按钮

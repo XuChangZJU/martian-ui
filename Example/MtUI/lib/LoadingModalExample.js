@@ -52,7 +52,12 @@ class Sample extends React.Component {
                 </MtLoadingModal>
             );
         return (
-            <TouchableHighlight onPress={()=> {   this.setState({loading:true}); setTimeout(()=> {   this.setState({loading:false}) },3000) }}>
+            <TouchableHighlight onPress={()=> {
+                this.setState({loading:true});
+                Alert.alert('hello');
+                setTimeout(()=> {   this.setState({loading:false}) },3000) }
+            }
+            >
                 <Text style = { {height:30,justifyContent:'center',backgroundColor:'silver',textAlign:'center',fontSize:20}}>show</Text>
             </TouchableHighlight>
         )

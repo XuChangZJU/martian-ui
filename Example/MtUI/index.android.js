@@ -10,6 +10,7 @@ const React = require('react');
 const StatusBar = require('StatusBar');
 const StyleSheet = require('StyleSheet');
 const ToolbarAndroid = require('ToolbarAndroid');
+const UIExplorerExampleContainer = require('./UIExplorerExampleContainer');
 const UIExplorerExampleList = require('./UIExplorerExampleList');
 const UIExplorerList = require('./UIExplorerList');
 const UIExplorerNavigationReducer = require('./UIExplorerNavigationReducer');
@@ -17,6 +18,8 @@ const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
 const UIManager = require('UIManager');
 const URIActionMap = require('./URIActionMap');
 const View = require('View');
+
+import type {UIExplorerNavigationState} from './UIExplorerNavigationReducer';
 
 UIManager.setLayoutAnimationEnabledExperimental(true);
 
@@ -26,8 +29,8 @@ type Props = {
   exampleFromAppetizeParams: string,
 };
 
-type State = {
-  initialExampleUri: ?string,
+type State = UIExplorerNavigationState & {
+  externalExample: ?string,
 };
 
 class UIExplorerApp extends React.Component {
@@ -123,7 +126,6 @@ class UIExplorerApp extends React.Component {
     if (stack && stack.routes[index]) {
       const {key} = stack.routes[index];
       const ExampleModule = UIExplorerList.Modules[key];
-      const ExampleComponent = UIExplorerExampleList.makeRenderable(ExampleModule);
       return (
           <View style={styles.container}>
             <ToolbarAndroid
@@ -133,7 +135,8 @@ class UIExplorerApp extends React.Component {
                 style={styles.toolbar}
                 title={title}
             />
-            <ExampleComponent
+            <UIExplorerExampleContainer
+                module={ExampleModule}
                 ref={(example) => { this._exampleRef = example; }}
             />
           </View>
@@ -161,8 +164,10 @@ class UIExplorerApp extends React.Component {
     this.drawer && this.drawer.closeDrawer();
     const newState = UIExplorerNavigationReducer(this.state, action);
     if (this.state !== newState) {
-      this.setState(newState);
-      AsyncStorage.setItem('UIExplorerAppState', JSON.stringify(this.state));
+      this.setState(
+          newState,
+          () => AsyncStorage.setItem('UIExplorerAppState', JSON.stringify(this.state))
+      );
       return true;
     }
     return false;

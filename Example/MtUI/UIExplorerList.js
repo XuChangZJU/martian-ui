@@ -24,6 +24,10 @@ export type UIExplorerExample = {
 
 var ComponentExamples: Array<UIExplorerExample> = [
   {
+    key: 'ActionButtonExample',
+    module: require('./lib/ActionButtonExample')
+  },
+  {
     key: 'BadgeExample',
     module: require('./lib/BadgeExample')
   },
@@ -38,6 +42,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'CheckBoxExample',
     module: require('./lib/CheckBoxExample'),
+  },
+  {
+    key: 'CheckItemExample',
+    module: require('./lib/CheckItemExample'),
   },
   {
     key: 'CircleViewExample',
@@ -122,6 +130,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
   {
     key: 'ToastExample',
     module: require('./lib/ToastExample')
+  },
+  {
+    key: 'Demo',
+    module: require('./lib/Demo')
   },
  // undo component
   {
