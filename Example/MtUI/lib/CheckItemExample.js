@@ -36,6 +36,32 @@ const CheckItemExample = React.createClass({
                         </Text>
                     </View>
                 </UIExplorerBlock>
+                <UIExplorerBlock title="Disable UnChecked CheckItem">
+                    <View style={{ paddingTop: 20}}>
+                        <MtCheckItem
+                            checked={false}
+                            onPress= {this.setSelectedValue.bind(this, 'selected1')}
+                            disabled={true}
+                        >
+                        </MtCheckItem>
+                        <Text style={{marginTop:20}}>
+                            {`checked: ${this.state.selected1 ? 'yes' : 'no'}`}
+                        </Text>
+                    </View>
+                </UIExplorerBlock>
+                <UIExplorerBlock title="Disable Checked CheckItem">
+                    <View style={{ paddingTop: 20}}>
+                        <MtCheckItem
+                            checked={true}
+                            onPress= {this.setSelectedValue.bind(this, 'selected1')}
+                            disabled={true}
+                        >
+                        </MtCheckItem>
+                        <Text style={{marginTop:20}}>
+                            {`checked: ${this.state.selected1 ? 'yes' : 'no'}`}
+                        </Text>
+                    </View>
+                </UIExplorerBlock>
                 <UIExplorerBlock title="Custom CheckItem">
                     <View style={{ paddingTop: 20}}>
                         <MtCheckItem

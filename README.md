@@ -227,6 +227,7 @@ listview中在第一次网络请求前的空白页
    - `onPress: function(checked)`
 - 可选props
     - `size:number`大小
+    - `disabled:bool`按钮是否可按
     - `backgroundColor: string`背景颜色
     - `iconColor: string`图标颜色
     - `borderColor: string` 边框颜色
