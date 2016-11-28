@@ -132,6 +132,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/ToastExample')
   },
   {
+    key: 'WordExample',
+    module: require('./lib/WordExample')
+  },
+  {
     key: 'Demo',
     module: require('./lib/Demo')
   },

@@ -232,6 +232,15 @@ listview中在第一次网络请求前的空白页
     - `iconColor: string`图标颜色
     - `borderColor: string` 边框颜色
 
+###MtWord
+环中一个字
+#### props
+- 可选props
+    - `size:number`大小
+    - `color:string`颜色
+    - `style: object`字样式
+    - `containerStyle: string`容器样式
+
 ### MtCheckBox
 多选多按钮
 #### props

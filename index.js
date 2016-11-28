@@ -32,6 +32,7 @@ const MartianUI = {
     MtTabBar: require('./lib/TabBar'),
     MtTextArea: require('./lib/TextArea'),
     MtToast: require('./lib/Toast'),
+    MtWord: require('./lib/Word'),
     MtGrid: require('./lib/Grid'),
 
     MtColor: require('./utils/color'),
