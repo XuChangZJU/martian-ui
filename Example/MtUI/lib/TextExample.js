@@ -27,6 +27,7 @@ const {
     MtW3,
     MtW4,
     MtT0,
+    MtT1,
     MtT2,
     MtT3,
     MtT4,
@@ -163,6 +164,16 @@ exports.examples = [
                 <MtT0>
                     I'm T0 字体
                 </MtT0>
+            );
+        },
+    },
+    {
+        title: 'Plain T1',
+        render: function () {
+            return (
+                <MtT1>
+                    I'm T1 字体
+                </MtT1>
             );
         },
     },
