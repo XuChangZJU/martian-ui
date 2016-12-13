@@ -320,7 +320,8 @@ listview中在第一次网络请求前的空白页
 #### props
 -  可选props
 	- `message:string`显示的内容 	
-	- `deadline:number`截止时间(单位:毫秒) 	
+	- `deadline:number`截止时间(单位:毫秒)
+	- `onEnd: func` 倒计时结束时的回调函数
 	- `countdownMessage: func`倒计时显示内容
 	- `style:Object`文字样式
 	- `containerStyle:Object`整体样式 		
