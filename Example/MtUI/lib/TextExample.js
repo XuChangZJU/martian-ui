@@ -26,13 +26,17 @@ const {
     MtW2,
     MtW3,
     MtW4,
+    MtT0,
+    MtT1,
     MtT2,
     MtT3,
     MtT4,
     MtT6,
     MtT8,
+    MtL1,
     MtL2,
     MtL3,
+    MtL6,
     MtL8,
     MtL4,
     MtR4,
@@ -154,6 +158,26 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain T0',
+        render: function () {
+            return (
+                <MtT0>
+                    I'm T0 字体
+                </MtT0>
+            );
+        },
+    },
+    {
+        title: 'Plain T1',
+        render: function () {
+            return (
+                <MtT1>
+                    I'm T1 字体
+                </MtT1>
+            );
+        },
+    },
+    {
         title: 'Plain T2',
         render: function () {
             return (
@@ -204,6 +228,16 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain L1',
+        render: function () {
+            return (
+                <MtL1>
+                    I'm L1
+                </MtL1>
+            );
+        },
+    },
+    {
         title: 'Plain L2',
         render: function () {
             return (
@@ -230,6 +264,16 @@ exports.examples = [
                 <MtL4>
                     I'm L4
                 </MtL4>
+            );
+        },
+    },
+    {
+        title: 'Plain L6',
+        render: function () {
+            return (
+                <MtL6>
+                    I'm L6
+                </MtL6>
             );
         },
     },

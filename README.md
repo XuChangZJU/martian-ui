@@ -227,9 +227,19 @@ listview中在第一次网络请求前的空白页
    - `onPress: function(checked)`
 - 可选props
     - `size:number`大小
+    - `disabled:bool`按钮是否可按
     - `backgroundColor: string`背景颜色
     - `iconColor: string`图标颜色
     - `borderColor: string` 边框颜色
+
+###MtWord
+环中一个字
+#### props
+- 可选props
+    - `size:number`大小
+    - `color:string`颜色
+    - `style: object`字样式
+    - `containerStyle: string`容器样式
 
 ### MtCheckBox
 多选多按钮
@@ -310,7 +320,8 @@ listview中在第一次网络请求前的空白页
 #### props
 -  可选props
 	- `message:string`显示的内容 	
-	- `deadline:number`截止时间(单位:毫秒) 	
+	- `deadline:number`截止时间(单位:毫秒)
+	- `onEnd: func` 倒计时结束时的回调函数
 	- `countdownMessage: func`倒计时显示内容
 	- `style:Object`文字样式
 	- `containerStyle:Object`整体样式 		
