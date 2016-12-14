@@ -48,10 +48,6 @@ var ComponentExamples: Array<UIExplorerExample> = [
     module: require('./lib/CheckItemExample'),
   },
   {
-    key: 'CircleViewExample',
-    module: require('./lib/CircleViewExample')
-  },
-  {
     key: 'ContainerExample',
     module: require('./lib/ContainerExample')
   },
