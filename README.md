@@ -106,28 +106,28 @@ import {MtChar} from 'martian-ui';
 let {MtText,MtHeading,MtLabel} = MtChar;
 ```
 #### 组件
-- MtText：普通文字 14号 颜色#b4b4b4
+- MtText：普通文字 16号 颜色#b4b4b4
 - MtHeading 标题
-- MtLabel： 标签 14号 颜色#262626
-- MtM1：16号 颜色#ff630e
-- MtM2：14号 颜色#ff630e
-- MtM3：12号 颜色#ff630e
-- MtM4：10号 颜色#ff630e
-- MtM8：11号 颜色#ff630e
-- MtW2：14号 颜色white
-- MtW3：12号 颜色white
-- MtW4：10号 颜色white
-- MtT2：14号 颜色#262626
-- MtT3：12号 颜色#262626
-- MtT4：10号 颜色#262626
-- MtT6：15号 颜色#262626
-- MtT8：11号 颜色#262626
-- MtL2：14号 颜色#8f8f8f
-- MtL3：12号 颜色#8f8f8f
-- MtL4：10号 颜色#8f8f8f
-- MtL8：11号 颜色#8f8f8f
-- MtR4：10号 颜色#ff0000
-- MtB4：10号 颜色#3aa1ee
+- MtLabel： 标签 16号 颜色#262626
+- MtM1：16 + 2号 颜色#ff630e
+- MtM2：14 + 2号 颜色#ff630e
+- MtM3：12 + 2号 颜色#ff630e
+- MtM4：10 + 2号 颜色#ff630e
+- MtM8：11 + 2号 颜色#ff630e
+- MtW2：14 + 2号 颜色white
+- MtW3：12 + 2号 颜色white
+- MtW4：10 + 2号 颜色white
+- MtT2：14 + 2号 颜色#262626
+- MtT3：12 + 2号 颜色#262626
+- MtT4：10 + 2号 颜色#262626
+- MtT6：15 + 2号 颜色#262626
+- MtT8：11 + 2号 颜色#262626
+- MtL2：14 + 2号 颜色#8f8f8f
+- MtL3：12 + 2号 颜色#8f8f8f
+- MtL4：10 + 2号 颜色#8f8f8f
+- MtL8：11 + 2号 颜色#8f8f8f
+- MtR4：10 + 2号 颜色#ff0000
+- MtB4：10 + 2号 颜色#3aa1ee
 
 
 #### props 
