@@ -22,6 +22,7 @@ var {
   ScrollView,
   StyleSheet,
   View,
+   Animated,
 } = ReactNative;
 
 var UIExplorerTitle = require('./UIExplorerTitle');
@@ -50,7 +51,7 @@ var UIExplorerPage = React.createClass({
       null;
     var spacer = this.props.noSpacer ? null : <View style={styles.spacer} />;
     return (
-      <View style={styles.container}>
+      <Animated.View style={[styles.container,this.props.containerStyle]}>
         {title}
         <ContentWrapper
           style={styles.wrapper}
@@ -58,7 +59,7 @@ var UIExplorerPage = React.createClass({
             {this.props.children}
             {spacer}
         </ContentWrapper>
-      </View>
+      </Animated.View>
     );
   },
 });
@@ -77,4 +78,4 @@ var styles = StyleSheet.create({
   },
 });
 
-module.exports = UIExplorerPage;
+module.exports = Animated.createAnimatedComponent(UIExplorerPage);

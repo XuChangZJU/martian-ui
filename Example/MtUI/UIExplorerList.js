@@ -91,9 +91,17 @@ var ComponentExamples: Array<UIExplorerExample> = [
     key: 'LoadingModalExample',
     module: require('./lib/LoadingModalExample')
   },
+    {
+    key: 'ModalExample',
+    module: require('./lib/ModalExample')
+  },
   {
     key: 'NavBarExample',
     module: require('./lib/NavBarExample')
+  },
+    {
+    key: 'PopupViewExample',
+    module: require('./lib/PopupViewExample')
   },
   {
     key: 'RadioButtonExample',

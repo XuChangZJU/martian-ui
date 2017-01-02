@@ -53,6 +53,7 @@ exports.examples = [
             return (
                 <MtText style={ {textAlign: 'center'}}>
                     {string}
+                    {Date.now()}
                 </MtText>
             );
         },

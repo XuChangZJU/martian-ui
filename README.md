@@ -86,6 +86,28 @@ import {MtSeparator} from 'martian-ui'
 	
 ### MtLoadingModal
 loadingModal
+#### props
+- `visible:bool` 是否可见
+- `tip:string` 中间的提示文字
+
+### MtModal
+#### method
+- `open()` 
+- `close()`
+#### props
+- `style: Object`
+
+### MtPopupView
+从底部弹出的页面
+#### method
+- `open()` 
+- `close()`
+#### props
+- `style: Object` 页面总样式
+- `onClose: func`
+- `disableClose: bool` 右上角是否有关闭按钮
+- `iconStyle: Object` 按钮样式
+
 
 ### MtListView
 基本的列表视图
@@ -93,7 +115,7 @@ loadingModal
 - [View Props](http://facebook.github.io/react-native/docs/listview.html)
 - 常用props
 	- `data：Array` 数据源 
-	- `onReresh：function`   下拉刷新
+	- `onRefresh：function`   下拉刷新
 	- `refreshing：bool` 下拉时是否显示ActivityIndicator
 - 可选props
 	- `dataSource:ListViewDataSource` Native数据源，通常情况下可用props data代替
@@ -154,7 +176,7 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 	 	- `image`:当有title且无layout时disable
 	 	- `icon`:
 	 	- `onPress`:
-	 	- `layout`:设为icon,则tilte为disable
+	 	- `layout`:设为icon,则title为disable
  	- `title:string` 导航栏标题
  	- `rightItem:Object` 属性同leftItem
 - 可选props：
@@ -175,7 +197,7 @@ let {MtText,MtHeading,MtLabel} = MtChar;
 	- `children：ReactComponent`每个component必须有一个`tabLabel`属性用来区别标签项
 - 可选props：
 	- `renderTabBar：ReactComponent` 自定义渲染效果，用默认值可以不写
-	- `intialPage：number` 被选中的初始标签页，从0开始计数
+	- `initialPage：number` 被选中的初始标签页，从0开始计数
 	- `tabBarUnderlineColor：string`默认标签栏下划线颜色
 	- `tabBarBackgroundColor：string`标签栏背景色
 	- `tabBarActiveTextColor：string`标签项被选中文字颜色
@@ -208,7 +230,7 @@ listview中在第一次网络请求前的空白页
 	- `testOptionEqual:function(option1,option2)`配合transformOption使用，判断option是否相等
 	- `renderContainer:function(optionNodes)`
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
-	- `selectedindex` 初始选中下标
+	- `selectedIndex` 初始选中下标
 
 ###MtCheckItem
 选中按钮
@@ -322,7 +344,7 @@ listview中在第一次网络请求前的空白页
 ### MtToast	
 android like 组件
 #### method
-- show(message:string, option:object)
+- static show(message:string, option:object)
     - option
         - `duration: number` 显示时间长短
         - `position: number` 正数表示离顶部距离,负数表示离底部距离,0表示正中央
@@ -332,7 +354,7 @@ android like 组件
         - `onShown: func`
         - `onHide: func`
         - `onHidden: func`
-- hide(handler)
+- static hide(handler)
 - [more detail](https://github.com/magicismight/react-native-root-toast)
 
 ### MtKeyboardView
