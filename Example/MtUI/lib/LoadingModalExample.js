@@ -48,13 +48,14 @@ class Sample extends React.Component {
     render() {
         if(this.state.loading)
             return(
-                <MtLoadingModal>
+                <MtLoadingModal
+                    visible={this.state.loading}
+                >
                 </MtLoadingModal>
             );
         return (
             <TouchableHighlight onPress={()=> {
                 this.setState({loading:true});
-                Alert.alert('hello');
                 setTimeout(()=> {   this.setState({loading:false}) },3000) }
             }
             >
