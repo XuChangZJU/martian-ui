@@ -27,6 +27,7 @@
   "homepage": "https://github.com/XuChangZJU/martian-ui#readme",
   "dependencies": {
     "react-native-button": "^1.6.0",
+    "react-native-indicator": "^0.6.7",
     "react-native-radio-buttons": "^0.12.1",
     "react-native-root-modal": "^1.0.7",
     "react-native-root-toast": "^1.0.3",

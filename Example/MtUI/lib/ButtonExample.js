@@ -11,6 +11,7 @@ var {
     Text,
     TouchableHighlight,
     View,
+    ActivityIndicator,
 } = ReactNative;
 
 var MtButton = require('martian-ui').MtButton;
@@ -77,6 +78,21 @@ exports.examples = [
                         </MtButton>
                     </View>
                 </View>
+            );
+        }
+    },
+    {
+        title: 'loading feature',
+        render: function () {
+            return (
+                <MtButton
+                    containerStyle={{ backgroundColor: 'green', marginTop: 5, }}
+                    onPress ={() => {Alert.alert(null,'I\'m a button')} }
+                >
+                    <ActivityIndicator
+                        color="white"
+                    />
+                </MtButton>
             );
         }
     },
