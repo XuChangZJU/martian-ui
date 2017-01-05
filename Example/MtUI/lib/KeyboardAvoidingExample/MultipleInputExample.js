@@ -35,7 +35,7 @@ class KeyboardAvoidingViewExample extends React.Component {
                     <TextInput
                         ref="input1"
                         onFocus={() => {
-                            this.refs.scroll.scrollTo({y: 300});
+                            this.refs.scroll.scrollTo({y: 480});
                         }}
                         onSubmitEditing={() => {
                             this.refs.input2.focus();
@@ -47,7 +47,7 @@ class KeyboardAvoidingViewExample extends React.Component {
                     <TextInput
                         ref="input2"
                         onFocus={() => {
-                             this.refs.scroll.scrollTo({y: 400});
+                             this.refs.scroll.scrollTo({y: 560});
                         }}
                         onSubmitEditing={() => {
                             this.refs.input3.focus();
@@ -60,10 +60,10 @@ class KeyboardAvoidingViewExample extends React.Component {
                     <TextInput
                         ref="input3"
                         onFocus={() => {
-                             this.refs.scroll.scrollTo({ y: 600, animated: true});
+                             this.refs.scroll.scrollTo({ y: 120, animated: true});
                         }}
                         onSubmitEditing={() => {
-                            this.refs.scroll.scrollTo({ y: 520, animated: true});
+                            this.refs.scroll.scrollTo({ y: 640, animated: true});
                         }}
                         placeholder="<TextInput3 />"
                         style={styles.textInput} />
@@ -83,7 +83,7 @@ class KeyboardAvoidingViewExample extends React.Component {
 
 const styles = StyleSheet.create({
     outerContainer: {
-        flex: 1,
+        // flex: 1,
     },
     text: {
         height: 60,

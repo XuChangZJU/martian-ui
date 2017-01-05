@@ -114,6 +114,7 @@ const PopupViewExample = React.createClass({
                     <Text style={styles.title}>
                         This is title
                     </Text>
+
                     <ScrollView ref="scroll">
                     <View style={styles.box}>
                         <Text style={styles.text}>Box One</Text>
@@ -128,7 +129,9 @@ const PopupViewExample = React.createClass({
                         title="count"
                         placeholder="type your choice"
                         keyboardType="numeric"
-                        onFocus={() => {this.refs.scroll.scrollTo({ y: 330, animated: true})}}
+                        onFocus={() => {
+                            this.refs.scroll.scrollTo({ y:0, animated: true})
+                        }}
                         onBlur={() => {this.refs.scroll.scrollTo({ y: 0, animated: false})}}
                     />
                     </ScrollView>
@@ -144,11 +147,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginVertical: 10,
         fontSize: 16,
-        // borderBottomWidth: 0.5,
-        // borderBottomColor: 'gray',
-        borderBottomWidth: 2,
-        borderColor: 'black'
-        // backgroundColor: 'red'
 
     },
     innerContainer: {

@@ -2,8 +2,17 @@
  * Created by lavystord on 16/12/29.
  */
 import React from "react";
-import {Button, StyleSheet, Text, View, Navigator, TouchableOpacity,
-    ActivityIndicator, TouchableWithoutFeedback} from "react-native";
+import {
+    Button,
+    StyleSheet,
+    Text,
+    View,
+    Navigator,
+    TouchableOpacity,
+    TextInput,
+    ActivityIndicator,
+    TouchableWithoutFeedback
+} from "react-native";
 const UIExplorerBlock = require('UIExplorerBlock');
 const UIExplorerPage = require('UIExplorerPage');
 const Modal = require('martian-ui').MtModal;
@@ -43,6 +52,7 @@ const ModalExample = React.createClass({
                     ref={(modal) =>  {
                         this.modal1 = modal
                     }}
+                    style={{ justifyContent: 'flex-end', backgroundColor: 'gray'}}
                 >
                     <Text
                         style={[styles.button, styles.close]}
@@ -50,10 +60,18 @@ const ModalExample = React.createClass({
                     >
                         Close
                     </Text>
+                    <View style={[styles.modalContainer]}>
+                        <Text style={styles.text}>Awesome!</Text>
+                    </View>
                     <View style={styles.modalContainer}>
                         <Text style={styles.text}>Amazing!</Text>
                     </View>
-                    <View style={styles.modalContainer}>
+                    <TextInput
+                        placeholder="type your name"
+                        style={{height: 40}}
+                    />
+                    <View style={styles.close2}>
+                        <Text style={styles.text}>Amazing!</Text>
                         <Text style={styles.text}>Amazing!</Text>
                     </View>
                 </Modal>
@@ -64,33 +82,34 @@ const ModalExample = React.createClass({
                     <View style={styles.bottomContentContainer}>
                         <TouchableOpacity
                             onPress={() => {this.modal2.close();}}
-                            style={{  position:'absolute',top:0, left:0, right:0, bottom:0,backgroundColor: 'yellow'}}
+                            style={{  position:'absolute',top:0, left:0, right:0, bottom:0}}
                         >
                         </TouchableOpacity>
                         <View>
-                        <Text
-                            style={[styles.button,styles.close]}
-                            onPress={() => {this.modal2.close();}}
-                        >
-                            Close
-                        </Text>
-                        <View style={styles.box}>
-                            <Text style={styles.text}>Box One</Text>
-                        </View>
-                        <View style={styles.box}>
-                            <Text style={styles.text}>Box Two</Text>
-                        </View>
-                        <View style={styles.box}>
-                            <Text style={styles.text}>Box Three</Text>
-                        </View>
-                        <View style={{ maxHeight: 60, backgroundColor: 'blue', overflow: 'visible'}}>
-                            <View style={{ height: 50, backgroundColor: 'red', zIndex:5}}/>
-                            <View style={{ height: 50, backgroundColor: 'green', zIndex:5}} />
-                        </View>
-                        <Button onPress={() => { this.setState({disable:!this.state.disable})}}
-                                title="hello world"
-                                color={ this.state.disable ? 'red' : 'navy'}
-                        />
+                            <Text
+                                style={[styles.button,styles.close]}
+                                onPress={() => {this.modal2.close();}}
+                            >
+                                Close
+                            </Text>
+                            <View style={styles.box}>
+                                <Text style={styles.text}>Box One</Text>
+                            </View>
+                            <View style={styles.box}>
+                                <Text style={styles.text}>Box Two</Text>
+                            </View>
+                            <TextInput placeholder="type your name"/>
+                            <View style={styles.box}>
+                                <Text style={styles.text}>Box Three</Text>
+                            </View>
+                            <View style={{ height: 60, backgroundColor: 'blue', overflow: 'visible'}}>
+                                <View style={{ height: 50, backgroundColor: 'red', overflow: 'visible'}}/>
+                                <View style={{ height: 50, backgroundColor: 'green', overflow: 'visible'}}/>
+                            </View>
+                            <Button onPress={() => { this.setState({disable:!this.state.disable})}}
+                                    title="hello world"
+                                    color={ this.state.disable ? 'red' : 'navy'}
+                            />
                         </View>
                     </View>
                 </Modal>
@@ -146,6 +165,13 @@ const styles = StyleSheet.create({
         top: 40,
         zIndex: 2,
         backgroundColor: 'red'
+    },
+    close2: {
+        position: 'absolute',
+        top: 200,
+        left: 0,
+        zIndex: 2,
+        backgroundColor: 'navy'
     },
     modalContainer: {
         height: 100,
