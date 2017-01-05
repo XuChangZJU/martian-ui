@@ -12,7 +12,7 @@ const MartianUI = {
     MtCheckBox: require('./lib/CheckBox'),
     MtCheckItem: require('./lib/CheckItem'),
     MtContainer: require('./lib/Container'),
-    MtDateTimePicker: require('./lib/DateTime'),
+    MtDateTimePicker: require('./lib/DateTimePicker'),
     MtEdit: require('./lib/Edit'),
     MtEditableItemPanel: require('./lib/EditableItemPanel'),
     MtEmptyView: require('./lib/EmptyView'),
