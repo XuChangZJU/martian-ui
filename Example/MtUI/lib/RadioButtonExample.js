@@ -42,6 +42,7 @@ const RadioButtonExample = React.createClass({
     return {
       selected1: null,
       selected2: null,
+      selected3: null,
     };
   },
 
@@ -58,6 +59,19 @@ const RadioButtonExample = React.createClass({
             </RadioButton>
             <Text style={{marginTop:20}}>
               {`your choice is: ${this.state.selected1}`}
+            </Text>
+          </View>
+        </UIExplorerBlock>
+        <UIExplorerBlock title="RadioButton with Chinese">
+          <View style={{ paddingTop: 20}}>
+            <RadioButton
+              options = {['北京', '上海','杭州']}
+              selectedOption={ this.state.selected3 }
+              onSelect = {this.setSelectedValue.bind(this, 'selected3')}
+            >
+            </RadioButton>
+            <Text style={{marginTop:20}}>
+              {`your choice is: ${this.state.selected3}`}
             </Text>
           </View>
         </UIExplorerBlock>

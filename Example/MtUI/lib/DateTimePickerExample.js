@@ -25,7 +25,7 @@ const DateTimePickerExample = React.createClass({
                         title="show DatePicker"
                         onPress={() =>
                             this.picker.showDatePicker(
-                                new Date(),
+                                new Date(2014,10,14),
                                 (date) => { this.setState({ date});}
                                 )
                         }
@@ -33,6 +33,36 @@ const DateTimePickerExample = React.createClass({
                     <Text style={styles.text}>
                         {`your choice is:  `}
                         {this.state.date && this.state.date.toLocaleDateString()}
+                    </Text>
+                </UIExplorerBlock>
+                <UIExplorerBlock title="TimePicker">
+                    <Button
+                        title="show TimePicker"
+                        onPress={() =>
+                            this.picker.showTimePicker(
+                                new Date(),
+                                (time) => { this.setState({ time});}
+                                )
+                        }
+                    />
+                    <Text style={styles.text}>
+                        {`your choice is:  `}
+                        {this.state.time && this.state.time.toLocaleTimeString()}
+                    </Text>
+                </UIExplorerBlock>
+                <UIExplorerBlock title="DateTimePicker">
+                    <Button
+                        title="show DateTimePicker"
+                        onPress={() =>
+                            this.picker.showDateTimePicker(
+                                new Date(),
+                                (datetime) => { this.setState({ datetime});}
+                                )
+                        }
+                    />
+                    <Text style={styles.text}>
+                        {`your choice is:  `}
+                        {this.state.datetime && this.state.datetime.toLocaleString()}
                     </Text>
                 </UIExplorerBlock>
                 <DateTimePicker
