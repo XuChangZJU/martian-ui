@@ -232,6 +232,23 @@ listview中在第一次网络请求前的空白页
 	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
 	- `selectedIndex` 初始选中下标
 
+### MtPicker
+滚轮式多选一按钮
+- 必写props
+	- `options: array`：选项数组
+	- `onSelect:function(selectedOption,selectedIndex)` 选中时的回调
+- 可选props
+    - `style: Object`
+	- `renderOption:function(option,selected,onSelect,index)` 应返回一个选项node，默认node为选项值，被选中时有对勾
+	- `transformOption:function(option)`当option为obj时，可以选择option的显示值
+	- `testOptionEqual:function(option1,option2)`配合transformOption使用，判断option是否相等
+	- `renderContainer:function(optionNodes)`
+	- `selectedOption` 初始选中选项，代码中用到setState时**必写**
+	- `selectedOptionColor: string` android only
+	- `selectedOptionSize: number` android only
+	- `optionStyle: Object` iOS only
+
+
 ###MtCheckItem
 选中按钮
 #### props
