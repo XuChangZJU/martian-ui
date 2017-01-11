@@ -26,6 +26,7 @@ const MartianUI = {
     MtModal: require('./lib/Modal'),
     MtNavBar: require('./lib/NavBar'),
     MtPicker:require('./lib/Picker'),
+    MtPopupPicker: require('./lib/PopupPicker'),
     MtPopupView: require('./lib/PopupView'),
     MtRadioButton: require('./lib/RadioButton'),
     MtSeparator: require('./lib/Separator'),

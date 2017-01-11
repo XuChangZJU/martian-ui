@@ -108,6 +108,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
         module: require('./lib/PickerExample')
     },
     {
+        key: 'PopupPickerExample',
+        module: require('./lib/PopupPickerExample')
+    },
+    {
         key: 'PopupViewExample',
         module: require('./lib/PopupViewExample')
     },

@@ -1,9 +1,6 @@
 /**
  * Created by lavystord on 17/1/1.
  */
-/**
- * Created by lavystord on 16/12/29.
- */
 import React from 'react';
 import {
     Button,
