@@ -49,7 +49,7 @@ const PopupPickerExample = React.createClass({
                     onSelect={(item,id) => this.setState({temp1: item})}
                     title="Date"
                     selectedOption={this.state.temp1}
-                    onComplete={() => this.setState({choice1: this.state.temp1})}
+                    onComplete={() => this.setState({choice1: this.state.temp1 ? this.state.temp1 : 'day1-day11'})}
                 />
             </UIExplorerPage>
         );
