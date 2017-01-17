@@ -3,17 +3,8 @@
  */
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
-    Alert,
-    StyleSheet,
-    TouchableHighlight,
-    Text,
-    View,
-} = ReactNative;
-
-var MtChar = require('martian-ui').MtChar;
+const MtChar = require('martian-ui').MtChar;
+import React from 'react';
 const {
     MtText,
     MtHeading,
@@ -23,9 +14,11 @@ const {
     MtM3,
     MtM4,
     MtM8,
+    MtW1,
     MtW2,
     MtW3,
     MtW4,
+    MtW5,
     MtT0,
     MtT1,
     MtT2,
@@ -79,6 +72,16 @@ exports.examples = [
         },
     },
     {
+        title: 'Plain W1',
+        render: function () {
+            return (
+                <MtW1>
+                    I'm W1 字体
+                </MtW1>
+            );
+        },
+    },
+    {
         title: 'Plain W2',
         render: function () {
             return (
@@ -105,6 +108,16 @@ exports.examples = [
                 <MtW4>
                     I'm W4 字体
                 </MtW4>
+            );
+        },
+    },
+    {
+        title: 'Plain W5',
+        render: function () {
+            return (
+                <MtW5>
+                    I'm W5 字体
+                </MtW5>
             );
         },
     },

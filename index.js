@@ -18,6 +18,7 @@ const MartianUI = {
     MtEmptyView: require('./lib/EmptyView'),
     MtFixedButton: require('./lib/FixedButton'),
     MtFloatingBar: require('./lib/FloatingBar'),
+    MtIconLabelBar: require('./lib/IconLabelBar'),
     MtInput: require('./lib/Input'),
     MtKeyboardView: require('./lib/KeyboardView'),
     MtLabelBar: require('./lib/LabelBar'),
@@ -35,7 +36,9 @@ const MartianUI = {
     MtTabBar: require('./lib/TabBar'),
     MtTextArea: require('./lib/TextArea'),
     MtToast: require('./lib/Toast'),
+    MtTouchable: require('./lib/Touchable'),
     MtWord: require('./lib/Word'),
+    //UnTest
     MtGrid: require('./lib/Grid'),
 
     MtColor: require('./utils/color'),

@@ -80,6 +80,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
         module: require('./lib/InputExample')
     },
     {
+        key: 'IconLabelBarExample',
+        module: require('./lib/IconLabelBarExample')
+    },
+    {
         key: 'KeyboardAvoidingExample',
         module: require('./lib/KeyboardAvoidingExample/KeyboardAvoidingExample')
     },
@@ -146,6 +150,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
     {
         key: 'ToastExample',
         module: require('./lib/ToastExample')
+    },
+    {
+        key: 'TouchableExample',
+        module: require('./lib/TouchableExample')
     },
     {
         key: 'WordExample',
