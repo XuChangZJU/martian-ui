@@ -5,5 +5,5 @@ module.exports = {
     arrow: '#adadad',
     main: '#ff630e',
     background: 'whitesmoke',
-    separator: '#e8e8e8',
+    separator: '#dddddd',
 };
