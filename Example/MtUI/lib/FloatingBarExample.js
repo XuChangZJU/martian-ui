@@ -6,79 +6,6 @@ const UIExplorerBlock = require('UIExplorerBlock');
 const UIExplorerPage = require('UIExplorerPage');
 import { MtFloatingBar } from 'martian-ui';
 
-// exports.title  = 'MtFloatingBar';
-// exports.description = 'FloatingBar is used to display message with countdown feature';
-// exports.examples = [
-//     {
-//         title: 'Plain FloatingBar',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     deadline={new Date().getTime()+ 1000 * 3600 *2 } //2 hours
-//                 />
-//             );
-//         },
-//     },
-//     {
-//         title: 'Plain FloatingBar2',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     deadline={new Date().getTime()+ 1000 * 60 * ( 60 * 24 + 72) } //one day 61 minutes
-//                 />
-//             );
-//         },
-//     },
-//     {
-//         title: 'countdown FloatingBar',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     deadline={new Date().getTime()+ 1000 * 62 } //62 seconds
-//                     message="countdown is over" //message when countdown is over
-//                 />
-//             );
-//         },
-//     },
-//     {
-//         title: 'countdown FloatingBar with custom render message',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     deadline={new Date().getTime()+ 1000 * 62 } //62 seconds
-//                     countdownMessage={(time) => `your time remains ${time}`}
-//                     message="count down is over" //message when countdown is over
-//                 />
-//             );
-//         },
-//     },
-//     {
-//         title: 'countdown FloatingBar with custom handler',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     deadline={new Date().getTime()+ 1000 * 12 } //62 seconds
-//                     countdownMessage={(time) => `your time remains ${time}`}
-//                     message="count down is over" //message when countdown is over
-//                     onEnd={() => alert('Game is Over')}
-//                 />
-//             );
-//         },
-//     },
-//     {
-//         title: 'Static FloatingBar',
-//         render: function () {
-//             return (
-//                 <MtFloatingBar
-//                     message='U receive a new message'
-//                 />
-//             );
-//         },
-//     },
-//
-// ];
-
-
 const FloatingBarExample = React.createClass({
     statics: {
         title: 'MtFloatingBar',
@@ -91,30 +18,37 @@ const FloatingBarExample = React.createClass({
     render() {
         return(
             <UIExplorerPage title="MtFloatingBar">
-                <UIExplorerBlock title="Plain FloatingBar">
+                <UIExplorerBlock title="deadline is 2 hours">
                     <MtFloatingBar
                         deadline={new Date().getTime()+ 1000 * 3600 *2 } //2 hours
                     />
                 </UIExplorerBlock>
-                <UIExplorerBlock title="Plain FloatingBar2">
+                <UIExplorerBlock title="deadline is one day and 61 minutes">
                     <MtFloatingBar
                         deadline={new Date().getTime()+ 1000 * 60 * ( 60 * 24 + 72) } //one day 61 minutes
                     />
                 </UIExplorerBlock>
-                <UIExplorerBlock title="countdown FloatingBar">
+                <UIExplorerBlock title="deadline is 62 seconds">
                     <MtFloatingBar
                         deadline={new Date().getTime()+ 1000 * 62 } //62 seconds
                         message="countdown is over" //message when countdown is over
                     />
                 </UIExplorerBlock>
-                <UIExplorerBlock title="countdown FloatingBar with custom render message">
+                <UIExplorerBlock title="custom countdown message with valid deadline">
                     <MtFloatingBar
                         deadline={new Date().getTime()+ 1000 * 62 } //62 seconds
                         countdownMessage={(time) => `your time remains ${time}`}
                         message="count down is over" //message when countdown is over
                     />
                 </UIExplorerBlock>
-                <UIExplorerBlock title="countdown FloatingBar with custom handler">
+                <UIExplorerBlock title="custom countdown message with invalid deadline">
+                    <MtFloatingBar
+                        deadline={new Date().getTime() - 1000 * 62 } //-62 seconds
+                        countdownMessage={(time) => `your time remains ${time}`}
+                        message="count down is over" //message when countdown is over
+                    />
+                </UIExplorerBlock>
+                <UIExplorerBlock title="when time is over,do something such as hiding FloatingBar">
                     {
                         !this.state.hide &&
                         <MtFloatingBar
