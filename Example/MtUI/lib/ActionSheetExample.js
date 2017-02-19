@@ -51,6 +51,16 @@ const ActionSheetExample = React.createClass({
                     </Text>
                 </UIExplorerBlock>
                 <ActionSheet
+                    ref={(actionSheet) => this.actionSheet1 = actionSheet }
+                    options={options1}
+                    cancelButtonIndex={0}
+                    title="type your title here"
+                    onPress={(index) => {
+                        this.setState({choice1: options1[index]});
+                        if(index === 0) alert('hello');
+                    }}
+                />
+                <ActionSheet
                     ref={(actionSheet) => this.actionSheet2 = actionSheet }
                     options={options1}
                     tintColor="green"
