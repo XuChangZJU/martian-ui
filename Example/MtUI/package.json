@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start --port 8082",
-    "postinstall": "react-native link react-native-wheel-picker-android",
     "startWithadb": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js start "
   },
   "dependencies": {
