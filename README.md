@@ -385,6 +385,12 @@ android like 组件
 - static hide(handler)
 - [more detail](https://github.com/magicismight/react-native-root-toast)
 
+### MtCall
+呼叫指定号码
+#### method
+- static callTo(number:string, prompt:boolean)
+
+
 ### MtKeyboardView
 用于解决ios、android的键盘遮挡问题
 #### props

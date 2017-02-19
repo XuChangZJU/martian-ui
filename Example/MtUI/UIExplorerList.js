@@ -40,6 +40,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
         module: require('./lib/ButtonExample')
     },
     {
+        key: 'CallExample',
+        module: require('./lib/CallExample')
+    },
+    {
         key: 'CaptchaExample',
         module: require('./lib/CaptchaExample'),
     },
