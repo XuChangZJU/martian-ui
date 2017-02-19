@@ -44,7 +44,7 @@ var UIExplorerBlock = React.createClass({
     }
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container,this.props.containerStyle]}>
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>
             {this.props.title}

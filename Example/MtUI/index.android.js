@@ -1,4 +1,3 @@
-
 'use strict';
 
 const AppRegistry = require('AppRegistry');
@@ -11,12 +10,18 @@ const React = require('react');
 const StatusBar = require('StatusBar');
 const StyleSheet = require('StyleSheet');
 const ToolbarAndroid = require('ToolbarAndroid');
+const UIExplorerExampleContainer = require('./UIExplorerExampleContainer');
 const UIExplorerExampleList = require('./UIExplorerExampleList');
 const UIExplorerList = require('./UIExplorerList');
 const UIExplorerNavigationReducer = require('./UIExplorerNavigationReducer');
 const UIExplorerStateTitleMap = require('./UIExplorerStateTitleMap');
+const UIManager = require('UIManager');
 const URIActionMap = require('./URIActionMap');
 const View = require('View');
+
+import type {UIExplorerNavigationState} from './UIExplorerNavigationReducer';
+
+UIManager.setLayoutAnimationEnabledExperimental(true);
 
 const DRAWER_WIDTH_LEFT = 56;
 
@@ -24,8 +29,8 @@ type Props = {
   exampleFromAppetizeParams: string,
 };
 
-type State = {
-  initialExampleUri: ?string,
+type State = UIExplorerNavigationState & {
+  externalExample: ?string,
 };
 
 class UIExplorerApp extends React.Component {
@@ -115,23 +120,23 @@ class UIExplorerApp extends React.Component {
           />
       );
     }
-    const title = UIExplorerStateTitleMap(stack.children[stack.index]);
-    const index = stack.children.length <= 1 ?  1 : stack.index;
+    const title = UIExplorerStateTitleMap(stack.routes[stack.index]);
+    const index = stack.routes.length <= 1 ?  1 : stack.index;
 
-    if (stack && stack.children[index]) {
-      const {key} = stack.children[index];
+    if (stack && stack.routes[index]) {
+      const {key} = stack.routes[index];
       const ExampleModule = UIExplorerList.Modules[key];
-      const ExampleComponent = UIExplorerExampleList.makeRenderable(ExampleModule);
       return (
           <View style={styles.container}>
             <ToolbarAndroid
-                logo={require('./launcher_icon.png')}
-                navIcon={require('./ic_menu_black_24dp.png')}
+                logo={require('./img/launcher_icon.png')}
+                navIcon={require('./img/ic_menu_black_24dp.png')}
                 onIconClicked={() => this.drawer.openDrawer()}
                 style={styles.toolbar}
                 title={title}
             />
-            <ExampleComponent
+            <UIExplorerExampleContainer
+                module={ExampleModule}
                 ref={(example) => { this._exampleRef = example; }}
             />
           </View>
@@ -140,8 +145,8 @@ class UIExplorerApp extends React.Component {
     return (
         <View style={styles.container}>
           <ToolbarAndroid
-              logo={require('./launcher_icon.png')}
-              navIcon={require('./ic_menu_black_24dp.png')}
+              logo={require('./img/launcher_icon.png')}
+              navIcon={require('./img/ic_menu_black_24dp.png')}
               onIconClicked={() => this.drawer.openDrawer()}
               style={styles.toolbar}
               title={title}
@@ -149,7 +154,7 @@ class UIExplorerApp extends React.Component {
           <UIExplorerExampleList
               onNavigate={this._handleAction}
               list={UIExplorerList}
-              {...stack.children[0]}
+              {...stack.routes[0]}
           />
         </View>
     );
@@ -159,8 +164,10 @@ class UIExplorerApp extends React.Component {
     this.drawer && this.drawer.closeDrawer();
     const newState = UIExplorerNavigationReducer(this.state, action);
     if (this.state !== newState) {
-      this.setState(newState);
-      AsyncStorage.setItem('UIExplorerAppState', JSON.stringify(this.state));
+      this.setState(
+          newState,
+          () => AsyncStorage.setItem('UIExplorerAppState', JSON.stringify(this.state))
+      );
       return true;
     }
     return false;
@@ -203,4 +210,3 @@ const styles = StyleSheet.create({
 AppRegistry.registerComponent('MtUI', () => UIExplorerApp);
 
 module.exports = UIExplorerApp;
-// AppRegistry.registerComponent('MtUI', () => MtUI);

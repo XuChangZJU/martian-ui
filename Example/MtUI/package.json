@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start --port 8082",
+    "startWithadb": "adb reverse tcp:8081 tcp:8081 && node node_modules/react-native/local-cli/cli.js start "
   },
   "dependencies": {
-    "react": "^15.1.0",
-    "react-native": "^0.27.1",
-    "martian-ui": "file:../../"
+    "martian-icon": "XuChangZJU/martian-icon#dev",
+    "martian-ui": "file:../../",
+    "react": "^15.4.1",
+    "react-native": "^0.38.1",
+    "react-native-vector-icons": "^2.0.3"
   }
 }
