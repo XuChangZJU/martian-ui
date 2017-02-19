@@ -5,6 +5,7 @@
 const MartianUI = {
     // Components
     MtActionButton: require('./lib/ActionButton'),
+    MtActionSheet: require('./lib/ActionSheet'),
     MtBadge: require('./lib/Badge'),
     MtButton: require('./lib/Button'),
     MtCaptcha: require('./lib/Captcha'),

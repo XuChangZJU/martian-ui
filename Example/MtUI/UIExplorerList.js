@@ -28,6 +28,10 @@ var ComponentExamples: Array<UIExplorerExample> = [
         module: require('./lib/ActionButtonExample')
     },
     {
+        key: 'ActionSheetExample',
+        module: require('./lib/ActionSheetExample')
+    },
+    {
         key: 'BadgeExample',
         module: require('./lib/BadgeExample')
     },
