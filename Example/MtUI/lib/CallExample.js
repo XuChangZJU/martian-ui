@@ -21,18 +21,5 @@ exports.examples = [
             );
         },
     },
-    {
-        title: 'Call without prompt',
-        render: function () {
-            return (
-                <Button
-                    title="call to 987654321"
-                    onPress={() => {
-                        MtCall.callTo('987654321',false);
-                    }}
-                />
-            );
-        },
-    },
 
 ];
