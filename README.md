@@ -388,7 +388,7 @@ android like 组件
 ### MtCall
 呼叫指定号码
 #### method
-- static callTo(number:string, prompt:boolean)
+- static callTo(number:string)
 
 
 ### MtKeyboardView
