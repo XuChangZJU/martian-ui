@@ -194,6 +194,15 @@ const NavBarExample = React.createClass({
     return (
         <UIExplorerPage title="MtNavBar">
           <UIExplorerBlock
+              title="statusBarHeight"
+          >
+              <Text
+                  style={{textAlign: 'center'}}
+              >
+                  {MtNavBar.statusBarHeight}
+              </Text>
+          </UIExplorerBlock>
+            <UIExplorerBlock
               title="NavBar with title"
               containerStyle={ {backgroundColor: 'black'}}
           >
