@@ -6,4 +6,5 @@ module.exports = {
     main: '#ff630e',
     background: 'whitesmoke',
     separator: '#dddddd',
+    gray: '#8f8f8f',
 };
