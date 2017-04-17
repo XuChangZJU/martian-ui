@@ -230,6 +230,17 @@ const NavBarExample = React.createClass({
                   rightItem={rightItem2}
               />
           </UIExplorerBlock>
+            <UIExplorerBlock
+              title="NavBar with left image and right title with dark foreground"
+          >
+              <MtNavBar
+                  title = 'hello world'
+                  leftItem={leftItem2}
+                  style={{backgroundColor: 'black'}}
+                  rightItem={rightItem2}
+                  foreground="dark"
+              />
+          </UIExplorerBlock>
           <UIExplorerBlock
               title="NavBar with left and right Icon"
               containerStyle={ {backgroundColor: 'black'}}

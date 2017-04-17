@@ -1,6 +1,6 @@
 {
   "name": "martian-ui",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A UI components Kit for Martian Inc",
   "main": "index.js",
   "files": [
