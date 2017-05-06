@@ -1,6 +1,6 @@
 {
   "name": "martian-ui",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "A UI components Kit for Martian Inc",
   "main": "index.js",
   "files": [
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd ../.. && react-native link react-native-wheel-picker-android"
+    "postinstall": "cd .. && cd .. && node node_modules/react-native/local-cli/cli.js link react-native-wheel-picker-android"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/XuChangZJU/martian-ui#readme",
   "dependencies": {
+    "react-native-actionsheet": "^2.0.5",
     "react-native-button": "^1.6.0",
     "react-native-indicator": "^0.6.7",
     "react-native-radio-buttons": "^0.12.1",

@@ -194,6 +194,15 @@ const NavBarExample = React.createClass({
     return (
         <UIExplorerPage title="MtNavBar">
           <UIExplorerBlock
+              title="statusBarHeight"
+          >
+              <Text
+                  style={{textAlign: 'center'}}
+              >
+                  {MtNavBar.statusBarHeight}
+              </Text>
+          </UIExplorerBlock>
+            <UIExplorerBlock
               title="NavBar with title"
               containerStyle={ {backgroundColor: 'black'}}
           >
@@ -219,6 +228,17 @@ const NavBarExample = React.createClass({
                   title = 'hello world'
                   leftItem={leftItem2}
                   rightItem={rightItem2}
+              />
+          </UIExplorerBlock>
+            <UIExplorerBlock
+              title="NavBar with left image and right title with dark foreground"
+          >
+              <MtNavBar
+                  title = 'hello world'
+                  leftItem={leftItem2}
+                  style={{backgroundColor: 'black'}}
+                  rightItem={rightItem2}
+                  foreground="dark"
               />
           </UIExplorerBlock>
           <UIExplorerBlock

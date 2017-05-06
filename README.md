@@ -83,6 +83,17 @@ import {MtSeparator} from 'martian-ui'
 	- `style：object` button中文字的文字样式
 	- `foreground：string` button中边框颜色是否为浅色
 	- `containerStyle：object` button背景样式	
+
+### MtActionSheet
+Cross platform ActionSheet
+#### props:
+- 常用props：
+	- `onPress：function `点击所触发的动作
+	- `options：arrayOf(String)` action列表
+	- `cancelButtonIndex：number` 取消按钮下标
+- 可选props：
+	- `destructiveButtonIndex：number` 红色按钮下标
+	- `tintColor：string` 按钮中的文字颜色
 	
 ### MtLoadingModal
 loadingModal
@@ -373,6 +384,12 @@ android like 组件
         - `onHidden: func`
 - static hide(handler)
 - [more detail](https://github.com/magicismight/react-native-root-toast)
+
+### MtCall
+呼叫指定号码
+#### method
+- static callTo(number:string)
+
 
 ### MtKeyboardView
 用于解决ios、android的键盘遮挡问题
