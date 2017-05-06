@@ -9,6 +9,8 @@ Before running the app, make sure you ran:
     cd ./martian-ui/Example/MtUI
     npm install
 
+- for RN 0.38, use the version 1.x;
+- for RN 0.44+, use the version 2.x;
 
 ## Usage
 ```js
