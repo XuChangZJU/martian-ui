@@ -19,38 +19,53 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  * @flow
+ * @providesModule UIExplorerActions
  */
 'use strict';
 
-export type UIExplorerListWithFilterAction = {
-  type: 'UIExplorerListWithFilterAction',
-  filter: ?string;
+export type UIExplorerBackAction = {
+    type: 'UIExplorerBackAction',
+};
+
+export type UIExplorerListAction = {
+    type: 'UIExplorerListAction',
 };
 
 export type UIExplorerExampleAction = {
-  type: 'UIExplorerExampleAction',
-  openExample: string;
+    type: 'UIExplorerExampleAction',
+    openExample: string,
 };
 
-export type UIExplorerAction = UIExplorerListWithFilterAction | UIExplorerExampleAction;
+export type UIExplorerAction = (
+    UIExplorerBackAction |
+        UIExplorerListAction |
+        UIExplorerExampleAction
+    );
 
-function ExampleListWithFilter(filter: ?string): UIExplorerListWithFilterAction {
-  return {
-    type: 'UIExplorerListWithFilterAction',
-    filter,
-  };
+
+function Back(): UIExplorerBackAction {
+    return {
+        type: 'UIExplorerBackAction',
+    };
+}
+
+function ExampleList(): UIExplorerListAction {
+    return {
+        type: 'UIExplorerListAction',
+    };
 }
 
 function ExampleAction(openExample: string): UIExplorerExampleAction {
-  return {
-    type: 'UIExplorerExampleAction',
-    openExample,
-  };
+    return {
+        type: 'UIExplorerExampleAction',
+        openExample,
+    };
 }
 
 const UIExplorerActions = {
-  ExampleListWithFilter,
-  ExampleAction,
+    Back,
+    ExampleList,
+    ExampleAction,
 };
 
 module.exports = UIExplorerActions;

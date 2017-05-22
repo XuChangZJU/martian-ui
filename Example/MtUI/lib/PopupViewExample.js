@@ -7,7 +7,6 @@ import {
     StyleSheet,
     Text,
     View,
-    Navigator,
     Animated,
     ScrollView,
     TouchableOpacity,

@@ -3,7 +3,8 @@
  */
 
 import React from "react";
-import {StyleSheet, View, Navigator} from "react-native";
+import {StyleSheet, View } from "react-native";
+import { Navigator } from 'react-native-deprecated-custom-components';
 import {MtButton, MtTabBar} from "martian-ui";
 import SimpleExample from "./SimpleExample";
 import OverlayExample from "./OverlayExample";

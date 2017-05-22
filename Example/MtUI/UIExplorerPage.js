@@ -1,4 +1,11 @@
 /**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
  * The examples provided by Facebook are for non-commercial testing and
  * evaluation purposes only.
  *
@@ -19,63 +26,68 @@
 var React = require('react');
 var ReactNative = require('react-native');
 var {
-  ScrollView,
-  StyleSheet,
-  View,
-   Animated,
+    ScrollView,
+    StyleSheet,
+    View,
 } = ReactNative;
 
 var UIExplorerTitle = require('./UIExplorerTitle');
 
-var UIExplorerPage = React.createClass({
+class UIExplorerPage extends React.Component {
+    props: {
+        noScroll?: boolean,
+        noSpacer?: boolean,
+    };
 
-  propTypes: {
-    keyboardShouldPersistTaps: React.PropTypes.bool,
-    noScroll: React.PropTypes.bool,
-    noSpacer: React.PropTypes.bool,
-  },
+    static propTypes = {
+        noScroll: React.PropTypes.bool,
+        noSpacer: React.PropTypes.bool,
+    };
 
-  render: function() {
-    var ContentWrapper;
-    var wrapperProps = {};
-    if (this.props.noScroll) {
-      ContentWrapper = (View: ReactClass<any>);
-    } else {
-      ContentWrapper = (ScrollView: ReactClass<any>);
-      wrapperProps.automaticallyAdjustContentInsets = !this.props.title;
-      wrapperProps.keyboardShouldPersistTaps = true;
-      wrapperProps.keyboardDismissMode = 'interactive';
+    render() {
+        var ContentWrapper;
+        var wrapperProps = {};
+        if (this.props.noScroll) {
+            ContentWrapper = (View: ReactClass<any>);
+        } else {
+            ContentWrapper = (ScrollView: ReactClass<any>);
+            // $FlowFixMe found when converting React.createClass to ES6
+            wrapperProps.automaticallyAdjustContentInsets = !this.props.title;
+            wrapperProps.keyboardShouldPersistTaps = 'handled';
+            wrapperProps.keyboardDismissMode = 'interactive';
+        }
+        var title = this.props.title ?
+            <UIExplorerTitle title={this.props.title} /> :
+            null;
+        var spacer = this.props.noSpacer ? null : <View style={styles.spacer} />;
+        return (
+            <View style={styles.container}>
+                {title}
+              <ContentWrapper
+                  style={styles.wrapper}
+                  {...wrapperProps}>
+                  {
+                      // $FlowFixMe found when converting React.createClass to ES6
+                      this.props.children}
+                  {spacer}
+              </ContentWrapper>
+            </View>
+        );
     }
-    var title = this.props.title ?
-      <UIExplorerTitle title={this.props.title} /> :
-      null;
-    var spacer = this.props.noSpacer ? null : <View style={styles.spacer} />;
-    return (
-      <Animated.View style={[styles.container,this.props.containerStyle]}>
-        {title}
-        <ContentWrapper
-          style={styles.wrapper}
-          {...wrapperProps}>
-            {this.props.children}
-            {spacer}
-        </ContentWrapper>
-      </Animated.View>
-    );
-  },
-});
+}
 
 var styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#e9eaed',
-    flex: 1,
-  },
-  spacer: {
-    height: 270,
-  },
-  wrapper: {
-    flex: 1,
-    paddingTop: 10,
-  },
+    container: {
+        backgroundColor: '#e9eaed',
+        flex: 1,
+    },
+    spacer: {
+        height: 270,
+    },
+    wrapper: {
+        flex: 1,
+        paddingTop: 10,
+    },
 });
 
-module.exports = Animated.createAnimatedComponent(UIExplorerPage);
+module.exports = UIExplorerPage;
