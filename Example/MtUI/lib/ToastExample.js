@@ -14,10 +14,7 @@ exports.examples = [
         render: function () {
             return (
                 <TouchableHighlight onPress={()=> {
-                    MtToast.show('hello world',{
-                        duration: MtToast.durations.LONG,
-                        position: MtToast.positions.CENTER,
-                    });
+                    MtToast.show('hello world');
                 }}
                 >
                     <Text style = { {height:30,justifyContent:'center',backgroundColor:'silver',textAlign:'center',fontSize:20}}>Show Toast</Text>
