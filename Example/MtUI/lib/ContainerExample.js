@@ -3,33 +3,50 @@
  */
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
+import React from 'react';
+import {
     Alert,
     StyleSheet,
     TouchableHighlight,
     Text,
     View,
-} = ReactNative;
+} from 'react-native';
+const UIExplorerBlock = require('UIExplorerBlock');
+const UIExplorerPage = require('UIExplorerPage');
+const UIExplorerTitle = require('UIExplorerTitle');
+const MtContainer = require('martian-ui').MtContainer;
 
-var MtContainer = require('martian-ui').MtContainer;
-
-
-exports.title  = 'MtContainer';
-exports.description = 'Container is a view.';
-exports.examples = [
-    {
-        title: 'Plain Container',
-        description: 'A 50 pt height red View insides Container',
-        render: function () {
-            return (
+const ContainerExample = React.createClass({
+    statics: {
+        title: 'MtContainer',
+        description: 'Container is a view',
+    },
+    getInitialState() {
+        return {
+        }
+    },
+    render() {
+        // const ABUIExplorerPage = Animated.createAnimatedComponent(UIExplorerPage);
+        return (
+            <UIExplorerPage noScroll={true}>
+                <UIExplorerTitle title="Plain Container"/>
                     <MtContainer>
-                        <View style={{margin:10,backgroundColor: 'red',height:50}}>
+                        <View style={{margin:10,backgroundColor: 'red',height:50 }}>
                         </View>
                     </MtContainer>
-            );
-        },
+                    <UIExplorerTitle title="Pull to Refresh Container"/>
+                    <MtContainer
+                        style={{ height: 70 }}
+                        scroll
+                        onRefresh={() => alert('hello world')}
+                    >
+                        <View style={{margin: 5,backgroundColor: 'red',height:50}} />
+                        <View style={{margin: 5,backgroundColor: 'red',height:50}} />
+                        <View style={{margin: 5,backgroundColor: 'red',height:50}} />
+                    </MtContainer>
+            </UIExplorerPage>
+        );
     }
+});
 
-];
+module.exports = ContainerExample;
