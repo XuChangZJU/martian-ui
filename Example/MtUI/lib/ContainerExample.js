@@ -7,7 +7,6 @@ import React from 'react';
 import {
     Alert,
     StyleSheet,
-    TouchableHighlight,
     Text,
     View,
 } from 'react-native';
@@ -15,6 +14,7 @@ const UIExplorerBlock = require('UIExplorerBlock');
 const UIExplorerPage = require('UIExplorerPage');
 const UIExplorerTitle = require('UIExplorerTitle');
 const MtContainer = require('martian-ui').MtContainer;
+const MtNavBar = require('martian-ui').MtNavBar;
 
 const ContainerExample = React.createClass({
     statics: {
@@ -36,10 +36,11 @@ const ContainerExample = React.createClass({
                     </MtContainer>
                     <UIExplorerTitle title="Pull to Refresh Container"/>
                     <MtContainer
-                        style={{ height: 70 }}
                         scroll
+                        renderHeader={() => <MtNavBar title="title" leftItem={{title: 'button',onPress: () => alert('press')}} />}
                         onRefresh={() => alert('hello world')}
                     >
+                        <View style={{margin: 5,backgroundColor: 'red',height:50}} />
                         <View style={{margin: 5,backgroundColor: 'red',height:50}} />
                         <View style={{margin: 5,backgroundColor: 'red',height:50}} />
                         <View style={{margin: 5,backgroundColor: 'red',height:50}} />
