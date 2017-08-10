@@ -27,7 +27,7 @@ var {
 var UIExplorerTitle = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.props.containerStyle]}>
         <Text style={styles.text}>
           {this.props.title}
         </Text>
