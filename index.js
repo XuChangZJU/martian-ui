@@ -44,6 +44,7 @@ const MartianUI = {
     MtGrid: require('./lib/Grid'),
 
     MtColor: require('./utils/color'),
+    MtScreen: require('./utils/Screen'),
     normalize: require('./utils/normalize'),
 };
 
