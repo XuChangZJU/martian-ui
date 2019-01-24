@@ -89,11 +89,7 @@ function setSpTextByOld(size) {
  * @returns {boolean}
  */
 function isIphoneX() {
-    return (
-        Platform.OS === 'ios'
-        && ((screenH === X_HEIGHT && screenW === X_WIDTH)
-            || (screenH === X_WIDTH && screenW === X_HEIGHT))
-    );
+    return (Platform.OS === 'ios' && (Number(((screenH / screenW) + "").substr(0,4)) * 100) === 216);
 }
 
 /**
