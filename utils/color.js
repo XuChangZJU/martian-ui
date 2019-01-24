@@ -2,9 +2,9 @@
  * Created by Administrator on 2016/9/28.
  */
 module.exports = {
-    arrow: '#adadad',
-    main: '#ff630e',
+    arrow: '#ADADAD',
+    main: '#FF630E',
     background: 'whitesmoke',
-    separator: '#dddddd',
-    gray: '#8f8f8f',
+    separator: '#DDDDDD',
+    gray: '#8F8F8F',
 };
