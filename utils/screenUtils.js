@@ -18,70 +18,48 @@ const pixelRatio = PixelRatio.get();
 //像素密度
 const DEFAULT_DENSITY = 2;
 //px转换成dp
-//以iphone6为基准,如果以其他尺寸为基准的话,请修改下面的defaultWidth和defaultHeight为对应尺寸即可. 以下为1倍图时
-const defaultWidth = 375;
-const defaultHeight = 667;
-const w2 = defaultWidth / DEFAULT_DENSITY;
-//px转换成dp
-const h2 = defaultHeight / DEFAULT_DENSITY;
+const designWidth = 750.0;
+const designHeight = 1334.0;
 
-//缩放比例
-const _scaleWidth = screenW / defaultWidth;
-const _scaleHeight = screenH / defaultHeight;
 
-// iPhoneX
-const X_WIDTH = 375;
-const X_HEIGHT = 812;
+// 根据dp获取屏幕的px
+const screenPxW = PixelRatio.getPixelSizeForLayoutSize(screenW);
+const screenPxH = PixelRatio.getPixelSizeForLayoutSize(screenH);
+
 
 /**
- * 屏幕适配,缩放size , 默认根据宽度适配，纵向也可以使用此方法
- * 横向的尺寸直接使用此方法
- * 如：width ,paddingHorizontal ,paddingLeft ,paddingRight ,marginHorizontal ,marginLeft ,marginRight
- * @param size 设计图的尺寸
- * @returns {number}
+ * 设置text
+ * @param size  px
+ * @returns {Number} dp
  */
-function scaleSize(size) {
-    return size * _scaleWidth;
+function setSpText(size) {
+    const scaleWidth = screenW / designWidth;
+    const scaleHeight2 = screenH / designHeight;
+    const scale = Math.min(scaleWidth, scaleHeight2);
+    const size2 = Math.round(size * scale / fontScale + 0.5);
+    return size2;
 }
 
 /**
- * 屏幕适配 , 纵向的尺寸使用此方法应该会更趋近于设计稿
- * 如：height ,paddingVertical ,paddingTop ,paddingBottom ,marginVertical ,marginTop ,marginBottom
- * @param size 设计图的尺寸
- * @returns {number}
+ * 设置高度
+ * @param size  px
+ * @returns {Number} dp
  */
 function scaleHeight(size) {
-    return size * _scaleHeight;
+    const scaleHeight2 = size * screenPxH / designHeight;
+    const size2 = Math.round((scaleHeight2 / pixelRatio + 0.5));
+    return size2;
 }
 
 /**
- * 设置字体的size（单位px）
- * @param size 传入设计稿上的px , allowFontScaling 是否根据设备文字缩放比例调整，默认不会
- * @returns {Number} 返回实际sp
+ * 设置宽度
+ * @param size  px
+ * @returns {Number} dp
  */
-function setSpText(size, allowFontScaling) {
-    const scale = Math.min(_scaleWidth, _scaleHeight);
-    const fontSize = allowFontScaling ? 1 : fontScale;
-    return size * scale / fontSize;
-}
-
-
-/* 最初版本尺寸适配方案 也许你会更喜欢这个*/
-function scaleSizeByOld(size) {
-    let scaleWidth = screenW / w2;
-    let scaleHeight = screenH / h2;
-    let scale = Math.min(scaleWidth, scaleHeight);
-    size = Math.round((size * scale + 0.5));
-    return size / DEFAULT_DENSITY;
-}
-
-function setSpTextByOld(size) {
-    const scaleWidth = screenW / w2;
-    const scaleHeight2 = screenH / h2;
-    const scale = Math.min(scaleWidth, scaleHeight2);
-    const size2 = Math.round((size * scale + 0.5));
-
-    return size2 / DEFAULT_DENSITY * fontScale;
+function scaleSize(size) {
+    const scaleWidth = size * screenPxW / designWidth;
+    const size2 = Math.round((scaleWidth / pixelRatio + 0.5));
+    return size2;
 }
 
 /**
@@ -110,6 +88,20 @@ function ifIphoneX(iphoneXStyle, iosStyle = {}, androidStyle) {
     return iosStyle;
 }
 
+const isIos = Platform.OS === 'ios';
+const statusBarHeight = getStatusBarHeight();
+const safeAreaViewHeight = isIphoneX() ? 34 : 0;
+const androidAPILevel = !isIos && Platform.Version;
+const appBarHeight = isIos ? 44 : 50;
+
+//状态栏的高度
+function getStatusBarHeight() {
+    if (!isIos) return StatusBar.currentHeight;
+    if (isIphoneX()) {
+        return 44;
+    }
+    return 20;
+}
 
 module.exports = {
     width: screenW,
@@ -121,9 +113,12 @@ module.exports = {
     scaleHeight: scaleHeight,
     setSpText: setSpText,
 
-    scaleSizeByOld: scaleSizeByOld,
-    setSpTextByOld: setSpTextByOld,
-
     isIphoneX: isIphoneX,
     ifIphoneX: ifIphoneX,
+    isIos: isIos,
+    statusBarHeight: statusBarHeight,
+    safeAreaViewHeight: safeAreaViewHeight,
+    androidAPILevel: androidAPILevel,
+    getStatusBarHeight: getStatusBarHeight,
+    appBarHeight: appBarHeight,
 };
