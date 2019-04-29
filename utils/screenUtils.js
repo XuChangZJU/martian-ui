@@ -9,6 +9,7 @@ import {
     PixelRatio,
     Dimensions,
     Platform,
+    StatusBar,
 } from 'react-native';
 
 const screenW = Dimensions.get('window').width;
